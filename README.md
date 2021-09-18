@@ -4,6 +4,7 @@ Download latest compiled ROMs (v1.2) from: https://github.com/santiontanon/weste
 
 You will need an MSX emulator to play the game on a PC, for example OpenMSX: http://openmsx.org
 
+A game video can be seen here: https://youtu.be/weFJe88oebA
 
 ## Introduction
 
