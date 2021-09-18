@@ -1,0 +1,30 @@
+16 3 16 16
+blue_tiles_border
+blue_bricks
+7
+door-left-brick 8 0 33 1
+door-right-brick 4 0 36 0
+door-right-brick 12 0 36 1
+door-sw 4 0 35 0
+door-sw 12 0 35 1
+door-se 4 0 38 0
+door-se 14 0 38 1
+18
+brickwall 10 10 0
+grid 10 12 0
+grid 10 14 0
+brickwall 10 16 0
+brickwall 12 10 0
+brickwall 14 10 0
+brickwall 16 10 0
+brickwall 10 8 0
+grid 11 6 0
+grid 11 4 0
+brickwall 10 2 0
+crate 2 16 0
+rat 2 3 0 1 0
+rat 14 3 0 1 1
+spikes 4 4 0
+spikes 4 8 0
+spikes 4 12 0
+door-vampire1 14 18 0

@@ -1,0 +1,28 @@
+16 5 14 14
+blue_tiles_border
+blue_bricks
+2
+door-left-brick-stairs 6 2 24 1
+door-se 6 0 33 0
+21
+stairs-nw-1 2 6 0
+stairs-nw-2 4 6 0
+spiderweb 2 2 24
+column-blue 2 15 0
+column-blue 15 15 0
+spikes 2 10 0
+spikes 4 10 0
+spikes 6 10 0
+spikes 8 10 0
+spikes 10 10 0
+spikes 12 10 0
+spikes 14 10 0
+barrel 4 15 0
+barrel 6 15 0
+barrel 6 15 16
+barrel 8 15 0
+crate 9 2 0
+crate 7 2 0
+torch 1 12 16
+torch 7 1 16
+spider 12 6 0 0 0

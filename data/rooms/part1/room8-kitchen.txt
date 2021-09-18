@@ -1,0 +1,19 @@
+16 5 12 12
+blue_tiles_border
+victorian-tiles
+3
+door-sw 6 0 6 1
+door-se 6 0 9 0
+door-victorian-tiles-ne 7 0 11 0
+11
+crate-garlic2 12 2 0
+barrel 13 11 0
+barrel 13 13 0
+shelves-nw 2 2 0
+shelves-nw 2 12 0
+sink 2 6 0
+window-ne 5 1 16
+stool 2 9 0
+dining-table-1 6 8 0
+dining-table-2 6 6 0
+door-right-blue 9 1 0

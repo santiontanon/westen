@@ -1,0 +1,70 @@
+Repeat(2),Piano,Lab2	Piano,-	Piano,-
+	Mib3	
+	Lab3	
+	Mib3	
+	Sib3	
+	Mib3	
+	Si3	
+		
+		
+EndRepeat,Repeat(2),Mi2	-	-
+	Si2	
+	Lab3	
+	Si2	
+	Sib3	
+	Si2	
+	Si3	
+		
+		
+EndRepeat,Repeat(2),Lab2	-	-
+	Mib3	
+	Lab3	Mib5
+	Mib3	
+	Sib3	Reb5
+	Mib3	
+	Si3	Si4
+		
+EndRepeat,Mi2	-	Sib4
+	Si2	
+	Lab3	
+	Si2	
+	Sib3	Lab4
+	Si2	
+	Si3	
+		
+Fa#2	-	Fa#4
+	Do#3	
+	Fa#3	
+	Do#3	
+	Sol#3	Sol#4
+	Do#3	
+	Sib3	Fa#4
+		
+Lab2	-	Sol#4
+	Mib3	
+	Lab3	
+	Mib3	
+	Sib3	-
+	Mib3	
+	Si3	
+		
+		
+Lab2	-	
+	Mib3	
+	Lab3	
+	Mib3	
+	Sib3	
+	Mib3	
+	Si3	
+		
+		
+Repeat(2),Mi2	-	-
+	Si2	
+	Lab3	
+	Si2	
+	Sib3	
+	Si2	
+	Si3	
+		
+		
+EndRepeat,-	-	-

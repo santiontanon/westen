@@ -1,0 +1,8 @@
+16 6 6 6
+wood
+victorian-blue
+2
+door-wood-sw 2 0 2 5
+door-wood-ne 3 0 48 0
+1
+door-right-green 5 1 0

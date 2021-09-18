@@ -1,0 +1,29 @@
+16 4 12 14
+blue_tiles_border
+blue_bricks
+1
+door-left-brick-stairs 4 2 8 1
+23
+stairs-nw-1 2 4 0
+stairs-nw-2 4 4 0
+stool 2 6 0
+stool 4 6 0
+chair-left 4 2 0
+chair-right 5 2 0
+chair-left 7 2 0
+chair-right 8 2 0
+shelves-nw 2 8 0
+crate 6 8 0
+crate-garlic3 2 11 0
+barrel 13 2 0
+crate 2 14 0
+crate 2 14 9
+crate 6 14 0
+crate 6 14 9
+barrel 13 6 0
+barrel 13 8 0
+crate 10 14 0
+crate 10 14 9
+crate 10 14 18
+rat 12 11 0 1 2
+oil 11 15 27

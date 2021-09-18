@@ -1,0 +1,28 @@
+16 5 14 14
+wood
+victorian
+2
+door-wood-se 8 0 16 0
+door-wood-ne 11 0 21 0
+21
+night-table 4 2 0
+gramophone 5 2 16
+clock-right 9 2 0
+couch 6 4 0
+table-1 5 8 0
+table-2 7 8 0
+chair-left 3 8 0
+chair-right 10 8 0
+violin 2 4 0
+violin 2 6 0
+vase 2 15 0
+vase 15 15 0
+crate 6 14 0
+crate 6 14 9
+stool 7 14 18
+crate 10 14 0
+crate 10 14 9
+crate 10 14 18
+crate 10 14 27
+spiderweb 2 2 24
+heart1 11 15 36

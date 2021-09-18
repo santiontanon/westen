@@ -1,0 +1,11 @@
+12 5 16 6
+wood
+victorian-blue
+3
+door-wood-nw 3 0 48 4
+door-wood-ne 11 0 58 0
+door-wood-se 4 0 60 0
+3
+slime 8 4 0 0 0
+night-table 8 2 0
+painting-right 3 1 18

@@ -1,0 +1,24 @@
+16 5 12 12
+grass
+no-wall
+1
+door-empty-ne 4 0 1 0
+18
+fence 10 12 0
+fence 10 10 0
+fence 10 8 0
+fence 10 6 0
+fence 10 4 0
+fence 10 2 0
+fence 6 12 0
+fence 6 10 0
+fence 6 8 0
+fence 6 6 0
+fence 6 4 0
+fence 6 2 0
+stone 2 4 0
+stone 12 12 0
+flower 2 7 0
+flower 2 11 0
+flower 13 3 0
+flower 13 8 0

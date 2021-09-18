@@ -1,0 +1,166 @@
+Repeat(2),Piano,Lab2	Pianosoft,-	-
+		
+	Mib3	
+		
+	Lab3	
+		
+	Mib3	
+		
+	Sib3	
+		
+	Mib3	
+		
+	Si3	
+		
+		
+		
+		
+		
+EndRepeat,Mi2	-	-
+		
+	Si2	
+		
+	Lab3	
+		
+	Si2	
+		
+	Sib3	
+		
+	Si2	
+		
+	Si3	
+		
+		
+		
+		
+		
+Mi2	-	-
+		
+	Si2	
+		
+	Lab3	
+		
+	Si2	
+		
+	Sib3	
+		
+	Si2	sfx(sfx_open_hihat)
+		sfx(sfx_open_hihat)
+	Si3	
+		sfx(sfx_open_hihat)
+		
+		sfx(sfx_open_hihat)
+		sfx(sfx_open_hihat)
+		sfx(sfx_open_hihat)
+Repeat(2),-	Lab2	Lab1
+		-
+	Mib3	sfx(sfx_short_hihat)
+		
+Pianosoft,Mib5	Lab3	sfx(sfx_open_hihat)
+		
+	Mib3	
+		
+Reb5	Sib3	
+		
+	Mib3	Mib1
+		-
+Si4	Si3	sfx(sfx_open_hihat)
+		
+		
+		
+EndRepeat,Sib4	Mi2	Mi1
+		-
+	Si2	sfx(sfx_short_hihat)
+		
+	Lab3	sfx(sfx_open_hihat)
+		
+	Si2	
+		
+Lab4	Sib3	sfx(sfx_short_hihat)
+		sfx(sfx_short_hihat)
+	Si2	Mib1
+		-
+	Si3	sfx(sfx_open_hihat)
+		
+		
+		
+Fa#4	Fa#2	Fa#1
+		-
+	Do#3	sfx(sfx_short_hihat)
+		
+	Fa#3	sfx(sfx_open_hihat)
+		
+	Do#3	
+		
+Sol#4	Sol#3	sfx(sfx_short_hihat)
+		sfx(sfx_short_hihat)
+	Do#3	Do#1
+		-
+Fa#4	Sib3	sfx(sfx_open_hihat)
+		
+		
+		
+Sol#4	Lab2	Lab1
+		-
+	Mib3	sfx(sfx_short_hihat)
+		
+	Lab3	sfx(sfx_open_hihat)
+		
+	Mib3	
+		
+-	Sib3	sfx(sfx_short_hihat)
+		sfx(sfx_short_hihat)
+	Mib3	Mib1
+		-
+	Si3	sfx(sfx_open_hihat)
+		
+		
+		
+Piano,Lab2	-	Lab1
+		-
+	Mib3	sfx(sfx_short_hihat)
+		
+	Lab3	sfx(sfx_open_hihat)
+		
+	Mib3	
+		
+	Sib3	sfx(sfx_short_hihat)
+		sfx(sfx_short_hihat)
+	Mib3	Mib1
+		-
+	Si3	sfx(sfx_open_hihat)
+		
+		
+		
+Mi2	-	Mi1
+		-
+	Si2	sfx(sfx_short_hihat)
+		
+	Lab3	sfx(sfx_open_hihat)
+		
+	Si2	
+		
+	Sib3	sfx(sfx_short_hihat)
+		sfx(sfx_short_hihat)
+	Si2	Si1
+		-
+	Si3	sfx(sfx_open_hihat)
+		
+		
+		
+Mi2	-	Mi1
+		-
+	Si2	sfx(sfx_short_hihat)
+		
+	Lab3	sfx(sfx_open_hihat)
+		
+	Si2	
+		
+	Sib3	sfx(sfx_short_hihat)
+		sfx(sfx_short_hihat)
+	Si2	Si1
+		-
+	Si3	sfx(sfx_open_hihat)
+		
+		
+-	-	-

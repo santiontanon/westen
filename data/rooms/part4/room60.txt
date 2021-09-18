@@ -1,0 +1,20 @@
+19 4 6 12
+wood
+victorian-blue
+2
+door-wood-nw 11 0 50 2
+door-empty-ne 255 4 61 0
+13
+stair-steps-right 2 2 24
+stair-steps-right 2 3 16
+stair-steps-right 2 4 8
+stair-steps-right 2 5 0
+stair-steps-rail 4 2 24
+stair-steps-rail 4 3 16
+stair-steps-rail 4 4 8
+stair-steps-rail 4 5 0
+crate 2 2 0
+crate 4 2 0
+crate 6 2 0
+crate 6 2 9
+vase 7 13 0

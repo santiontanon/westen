@@ -1,0 +1,26 @@
+16 4 14 14
+blue_tiles_border
+blue_bricks
+2
+door-right-brick 2 0 34 3
+door-right-brick 10 0 34 4
+19
+brickwall 8 2 0
+brickwall 2 8 0
+brickwall 8 4 0
+brickwall 4 8 0
+brickwall 8 6 0
+brickwall 6 8 0
+brickwall 8 8 0
+coffin-1 2 13 8
+coffin-2 2 12 8
+torch 1 12 16
+door-vampire1 12 2 0
+blue-brick 2 10 0
+blue-brick 2 12 0
+blue-brick 2 14 0
+stairs-nw-2 4 12 0
+vase 8 10 0
+vase 8 15 0
+chest2 10 8 0
+crate-stake3 10 6 0

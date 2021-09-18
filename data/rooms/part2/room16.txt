@@ -1,0 +1,16 @@
+10 5 16 6
+wood
+victorian
+4
+door-wood-nw 5 0 17 0
+door-wood-se 4 0 2 1
+door-wood-ne 13 0 18 0
+door-wood-ne 3 0 19 0
+7
+crate 10 2 0
+crate 12 2 0
+crate 10 2 9
+crate 12 2 9
+rat 10 5 0 2 0
+rat 12 7 0 2 2
+spiderweb 2 2 24

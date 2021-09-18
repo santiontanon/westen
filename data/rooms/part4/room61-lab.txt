@@ -1,0 +1,24 @@
+16 5 12 12
+wood
+bookshelves
+1
+door-wood-sw 8 0 60 1
+18
+chair-left 10 6 0
+writing-table-2 12 5 0
+writing-table-1 12 7 0
+writing-table-2 4 3 0
+writing-table-1 4 5 0
+writing-table-2 4 9 0
+writing-table-1 4 11 0
+bookstack 5 3 14
+bookstack 6 5 0
+bookstack 13 9 0
+bookstack 7 13 0
+crate-stake1 12 10 0
+crate-garlic1 12 12 0
+lab-bottle 4 4 14
+lab-bottle 4 6 14
+lab-bottles 4 10 14
+lab-notes 13 6 14
+hammer 13 13 9

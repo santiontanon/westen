@@ -1,0 +1,19 @@
+18 4 10 16
+blue_tiles_border
+blue_bricks
+1
+door-sw 4 0 44 1
+13
+brickwall 2 14 0
+brickwall 4 14 0
+brickwall 8 8 0
+brickwall 10 8 0
+coffin-1 8 3 0
+coffin-2 8 2 0
+column-blue 2 2 0
+column-blue 11 2 0
+chest2 2 4 0
+night-table 10 10 0
+vase 2 7 0
+vase 2 9 0
+bookstack 4 2 0

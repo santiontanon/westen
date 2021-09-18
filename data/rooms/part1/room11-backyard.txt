@@ -1,0 +1,29 @@
+16 5 12 12
+grass
+no-wall
+1
+door-empty-sw 4 0 8 2
+23
+column 2 3 0
+fence2 2 2 0
+fence2 4 2 0
+fence2 6 2 0
+fence2 8 2 0
+fence2 10 2 0
+fence2 12 2 0
+column 13 3 0
+fence 2 4 0
+fence 2 6 0
+fence 2 8 0
+fence 2 10 0
+fence 2 12 0
+fence 14 4 0
+fence 14 6 0
+fence 14 8 0
+fence 14 10 0
+fence 14 12 0
+tombstone 8 4 0
+flower 6 5 0
+flower 11 5 0
+flower 6 7 0
+flower 11 7 0

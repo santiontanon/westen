@@ -1,0 +1,30 @@
+15 5 14 12
+wood
+victorian
+4
+door-wood-sw 10 0 17 1
+door-wood-se 8 0 19 1
+door-wood-ne 3 0 22 0
+door-wood-ne 11 0 23 0
+21
+tall-crate 10 2 0
+tall-crate 10 4 0
+tall-crate 9 6 0
+tall-crate 2 12 0
+barrel 9 8 0
+tall-crate 8 10 0
+tall-crate 8 12 0
+barrel 7 9 0
+barrel 10 11 0
+tall-crate 10 2 16
+crate 10 4 16
+crate 9 6 16
+barrel 9 8 16
+barrel 7 9 16
+crate 8 10 16
+crate 8 12 16
+barrel 10 11 16
+tall-stool 11 8 0
+tall-stool 11 9 0
+tall-stool 11 10 0
+spiderweb 2 2 24

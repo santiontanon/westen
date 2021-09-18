@@ -1,0 +1,33 @@
+16 3 16 16
+blue_tiles_border
+blue_bricks
+5
+door-sw 2 0 34 1
+door-sw 12 0 34 2
+door-right-brick 6 0 39 0
+door-se 4 0 37 0
+door-se 14 0 37 1
+23
+brickwall 2 10 0
+brickwall 4 10 0
+brickwall 6 10 0
+brickwall 8 10 0
+brickwall 10 10 0
+brickwall 12 10 0
+brickwall 14 10 0
+brickwall 16 10 0
+blue-brick 5 14 0
+spikes 7 12 0
+spikes 9 12 0
+spikes 11 12 0
+spikes 7 14 0
+blue-brick 9 14 0
+spikes 11 14 0
+spikes 7 16 0
+spikes 9 16 0
+spikes 11 16 0
+blue-brick 13 14 0
+column-blue 6 2 0
+column-blue 11 2 0
+torch 4 1 20
+torch 13 1 20

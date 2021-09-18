@@ -1,0 +1,21 @@
+16 5 10 12
+wood
+victorian-blue
+2
+door-wood-se 8 0 49 2
+door-wood-ne 3 0 55 0
+14
+window-left 1 8 12
+fireplace 2 2 0
+bed-1 2 12 0
+bed-2 4 12 0
+table-1 8 2 0
+table-2 10 2 0
+stool 9 5 0
+chest 8 13 0
+crate 10 12 0
+carpet-2 4 5 255
+carpet-1 4 7 255
+slime 3 5 0 0 0
+slime 7 10 0 0 1
+diary1 11 2 8

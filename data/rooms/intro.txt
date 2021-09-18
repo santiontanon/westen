@@ -1,0 +1,10 @@
+15 8 6 10
+wood
+victorian
+2
+door-wood-nw 7 0 5 1
+door-wood-ne 3 0 8 0
+3
+night-table 2 2 0
+vase 7 9 0
+door-right-yellow 5 1 0

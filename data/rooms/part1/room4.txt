@@ -1,0 +1,11 @@
+14 5 14 8
+wood
+victorian
+2
+door-wood-nw 5 0 2 3
+door-wood-ne 10 0 7 0
+4
+chest 2 9 0
+chest 14 9 0
+painting-right 3 1 16
+night-table 7 2 0

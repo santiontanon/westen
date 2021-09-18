@@ -1,0 +1,17 @@
+16 5 12 12
+wood
+bookshelves
+1
+door-wood-sw 8 0 19 2
+11
+chair-left 4 6 0
+writing-table-2 6 5 0
+writing-table-1 6 7 0
+book 7 5 14
+bookstack 2 6 0
+bookstack 7 10 0
+bookstack 6 2 0
+bookstack 9 2 0
+bookstack 9 2 6
+vase 13 5 0
+vase 13 13 0

@@ -1,0 +1,11 @@
+18 5 6 10
+blue_tiles_border
+victorian-tiles
+1
+door-victorian-tiles-nw 7 0 48 5
+5
+crate 6 10 0
+bathtub 5 2 0
+toilet 2 3 0
+sink 2 9 0
+stool 7 8 0

@@ -1,0 +1,19 @@
+17 4 12 14
+blue_tiles_border
+blue_bricks_shelves
+2
+door-sw 2 0 37 2
+door-sw 8 0 37 3
+12
+chair-left 5 5 0
+writing-table-2 7 4 0
+writing-table-1 7 6 0
+bookstack 12 5 0
+bookstack 12 7 0
+bookstack 11 9 0
+crate 2 10 0
+tall-crate 2 12 0
+chest-gun 13 12 0
+book-westenra 8 6 16
+green-key 2 12 16
+fireplace 2 5 0

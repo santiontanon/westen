@@ -1,0 +1,16 @@
+16 5 12 12
+wood
+bookshelves
+1
+door-wood-sw 8 0 4 1
+10
+crate 12 4 0
+tall-crate 12 6 0
+couch 4 4 0
+couch 7 4 0
+table-1 5 8 0
+table-2 7 8 0
+night-table 12 8 0
+chair-right 13 11 0
+hanger 6 13 0
+lamp 13 7 16

@@ -1,0 +1,29 @@
+16 4 14 14
+blue_tiles_border
+blue_bricks
+1
+door-right-brick 4 0 41 1
+23
+coffin-1 2 13 16
+coffin-2 2 12 16
+blue-brick 4 10 0
+blue-brick 4 12 0
+blue-brick 4 14 0
+blue-brick 2 14 0
+blue-brick 2 10 8
+blue-brick 2 12 8
+blue-brick 2 14 8
+stairs-nw-2 6 12 0
+stairs-nw-2 4 12 8
+red-carpet 8 12 255
+brickwall 2 8 0
+brickwall 4 8 0
+brickwall 6 8 0
+brickwall 8 8 0
+brickwall 10 8 0
+column-blue 11 15 0
+column-blue 11 10 0
+column-blue 2 2 0
+column-blue 15 2 0
+chest2 12 8 0
+chest 12 2 0

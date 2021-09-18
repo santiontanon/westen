@@ -1,0 +1,33 @@
+16 4 14 14
+wood
+victorian
+6
+door-wood-sw 6 0 1 1
+door-wood-nw 11 0 16 1
+door-wood-ne 11 0 46 1
+door-wood-se 4 0 4 0
+door-wood-se 12 0 3 0
+door-empty-ne 255 4 10 0
+22
+chest 2 2 0
+chest 4 2 0
+stair-steps-right 2 2 24
+stair-steps-right 2 3 16
+stair-steps-right 2 4 8
+stair-steps-right 2 5 0
+stair-steps-rail 4 2 24
+stair-steps-rail 4 3 16
+stair-steps-rail 4 4 8
+stair-steps-rail 4 5 0
+clock-right 10 2 0
+table-1 8 6 0
+table-2 10 6 0
+chair-left 6 6 0
+chair-left 6 8 0
+chair-right 13 6 0
+chair-right 13 8 0
+chest 14 15 0
+painting-safe-right 6 1 16
+hanger 5 15 0
+door-left-red 1 11 0
+door-right-yellow 13 1 0

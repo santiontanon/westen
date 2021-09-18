@@ -1,0 +1,14 @@
+16 4 14 14
+blue_tiles_border
+blue_bricks
+2
+door-sw 6 0 23 1
+door-right-brick 6 0 32 0
+7
+pentagram1 5 9 255
+pentagram2 6 7 251
+bookstack 4 5 0
+bookstack 3 9 0
+door-ritual 8 1 0
+torch 12 1 16
+torch 5 1 16

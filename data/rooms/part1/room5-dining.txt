@@ -1,0 +1,21 @@
+16 5 14 14
+wood
+victorian
+2
+door-wood-nw 7 0 3 1
+door-wood-ne 9 0 6 0
+14
+chair-left 6 8 0
+chair-left 6 10 0
+dining-table-1 8 10 0
+dining-table-2 8 8 0
+chair-right 11 8 0
+chair-right 11 10 0
+clock-right 5 2 0
+shelves-nw 2 11 0
+letter3 2 12 32
+vase 2 15 0
+vase 15 15 0
+vase 2 2 0
+vase 15 2 0
+stool 8 2 0

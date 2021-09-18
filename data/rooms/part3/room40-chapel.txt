@@ -1,0 +1,29 @@
+15 5 14 12
+blue_tiles_border
+blue_bricks
+2
+door-sw 10 0 39 1
+door-right-brick 10 0 41 0
+22
+door-vampire3 12 2 0
+column-blue 10 2 0
+column-blue 15 2 0
+blue-brick 2 4 0
+blue-brick 2 6 0
+blue-brick 2 8 0
+blue-brick 2 10 0
+blue-brick 4 4 0
+blue-brick 4 6 0
+blue-brick 4 8 0
+blue-brick 4 10 0
+stairs-nw-2 6 6 0
+stairs-nw-2 6 8 0
+column-blue 2 4 8
+column-blue 2 11 8
+chair-right 9 5 0
+chair-right 11 5 0
+chair-right 9 10 0
+chair-right 11 10 0
+red-carpet 6 7 255
+altar 2 7 8
+cross 1 7 24

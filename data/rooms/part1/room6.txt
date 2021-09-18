@@ -1,0 +1,10 @@
+14 5 6 12
+wood
+victorian
+2
+door-wood-sw 2 0 5 1
+door-wood-ne 3 0 8 0
+3
+night-table 2 2 0
+stool 2 6 0
+stool 2 8 0

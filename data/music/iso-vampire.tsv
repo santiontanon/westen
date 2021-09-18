@@ -1,0 +1,64 @@
+Piano,Repeat(2),La1	PianoSoft,-	Piano,sfx(sfx_drum_short_re)
+		
+		sfx(sfx_drum_shorter_re)
+		
+Sib1		
+		
+		
+		
+La1		
+		
+		
+		
+Sib1		
+		
+		
+		
+EndRepeat,Repeat(4),La1	La5	sfx(sfx_drum_short_re)
+		
+	Mib5	sfx(sfx_drum_shorter_re)
+		
+Sib1	Mi5	
+		
+	Sib4	
+		
+La1	La4	
+		
+	Mi4	
+		
+Sib1	Mib4	
+		
+	La3	
+		
+EndRepeat,-	-	sfx(sfx_drum_short_re)
+		
+		sfx(sfx_drum_shorter_re)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		sfx(sfx_drum_short_re)
+		
+		sfx(sfx_drum_shorter_re)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+-	-	-

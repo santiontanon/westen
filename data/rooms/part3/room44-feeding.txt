@@ -1,0 +1,29 @@
+16 3 16 16
+blue_tiles_border
+blue_bricks
+2
+door-left-brick 4 0 38 4
+door-right-brick 8 0 45 0
+22
+chair-left 6 8 0
+chair-left 6 10 0
+dining-table-1 8 10 0
+dining-table-2 8 8 0
+chair-right 11 8 0
+chair-right 11 10 0
+bones1 4 14 0
+bones1 6 12 0
+bones2 8 14 0
+bones2 6 4 0
+bones3 14 8 0
+night-table 16 2 0
+yellow-key 17 2 16
+heart2 9 9 14
+torch 1 10 16
+torch 6 1 16
+vase 6 17 0
+vase 10 17 0
+vase 14 17 0
+door-vampire2 10 2 0
+column-blue 8 2 0
+column-blue 13 2 0

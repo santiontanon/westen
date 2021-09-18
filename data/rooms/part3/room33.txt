@@ -1,0 +1,21 @@
+13 5 12 6
+blue_tiles_border
+blue_bricks
+2
+door-left-brick 4 0 32 1
+door-se 4 0 34 0
+14
+column-blue 2 2 0
+column-blue 2 7 0
+column-blue 5 2 0
+column-blue 5 7 0
+column-blue 10 2 0
+column-blue 10 7 0
+column-blue 13 2 0
+column-blue 13 7 0
+blue-brick 8 3 0
+blue-brick 8 5 0
+blue-brick 8 3 8
+blue-brick 8 5 8
+spikes 10 3 0
+spikes 10 5 0

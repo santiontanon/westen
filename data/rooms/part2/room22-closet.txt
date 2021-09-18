@@ -1,0 +1,12 @@
+14 5 6 10
+wood
+victorian
+1
+door-wood-sw 2 0 21 2
+6
+shelves-nw 2 4 0
+shelves-nw 2 8 0
+crate 6 2 0
+tall-crate 6 8 0
+spider 4 5 0 0 0
+spiderweb 2 2 24

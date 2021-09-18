@@ -1,0 +1,32 @@
+16 3 16 16
+blue_tiles_border
+blue_bricks
+6
+door-left-brick 4 0 34 5
+door-left-brick 14 0 34 6
+door-right-brick 4 0 37 4
+door-right-brick 12 0 37 5
+door-se 4 0 44 0
+door-sw 12 0 46 0
+21
+brickwall 10 2 0
+brickwall 10 4 0
+brickwall 10 6 0
+brickwall 10 8 0
+brickwall 10 9 0
+brickwall 12 9 0
+brickwall 14 9 0
+brickwall 16 9 0
+tall-stool 12 15 0
+tall-crate 13 14 0
+tall-crate 10 11 0
+tall-crate 10 13 0
+tall-crate 10 16 0
+tall-crate 10 11 16
+tall-crate 10 13 16
+tall-crate 10 16 16
+stool 2 8 0
+stool 2 8 8
+barrel 6 17 0
+spider 6 14 0 0 0
+spider 6 8 0 0 1
