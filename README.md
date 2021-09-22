@@ -17,9 +17,9 @@ Westen House is an isometric adventure that has the goal of exploring the possib
 
 Screenshots (of version 1.2):
 
-<img src="https://raw.githubusercontent.com/santiontanon/westen/main/media/screen1.png?token=AAIEJPO55U5WLMQG52FSTELBIZY6M" alt="title" width="400"/> <img src="https://raw.githubusercontent.com/santiontanon/westen/main/media/screen2.png?token=AAIEJPOS2AKK4MVROMXCYSDBIZZHO" alt="in game 1" width="400"/> 
+<img src="https://raw.githubusercontent.com/santiontanon/westen/main/media/screen1.png" alt="title" width="400"/> <img src="https://raw.githubusercontent.com/santiontanon/westen/main/media/screen2.png" alt="in game 1" width="400"/> 
 
-<img src="https://raw.githubusercontent.com/santiontanon/westen/main/media/screen3.png?token=AAIEJPKSP2OVIM2GAZHP2Q3BIZZHU" alt="in game 2" width="400"/> <img src="https://raw.githubusercontent.com/santiontanon/westen/main/media/screen4.png?token=AAIEJPKZWCDRY5KXD4ETYETBIZZH2" alt="in game 2" width="400"/>
+<img src="https://raw.githubusercontent.com/santiontanon/westen/main/media/screen3.png" alt="in game 2" width="400"/> <img src="https://raw.githubusercontent.com/santiontanon/westen/main/media/screen4.png" alt="in game 2" width="400"/>
 
 
 ### Game Goal
