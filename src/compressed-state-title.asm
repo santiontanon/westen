@@ -109,6 +109,8 @@ state_title_loop_continue:
     ld a,(keyboard_line_clicks+KEY_BUTTON2_BYTE)
     bit KEY_BUTTON2_BIT,a
     jr nz,state_tutorial
+    bit KEY_BUTTON2_BIT_ALTERNATIVE,a
+    jr nz,state_tutorial
 
     dec bc
     ld a,b

@@ -5,11 +5,8 @@ state_ending:
 
 	; wait until the message is played and after that, wait a few seconds, or until player presses space:
 state_ending_wait1_loop:
-	ld a,(interrupt_cycle)
-	cp 2
-	jr c,state_ending_wait1_loop
-	xor a
-	ld (interrupt_cycle),a	
+	ld c,2
+	call wait_for_interrupt
 	call update_keyboard_buffers
 	call update_hud_messages
 	ld a,(hud_message_timer)
@@ -52,6 +49,7 @@ state_ending_wait1_loop:
 
 	; init variables:
 	xor a
+	ld (game_cycle),a
 	ld hl,ending_trigger_map
 	ld de,ending_trigger_map+1
 	ld (hl),a
@@ -59,8 +57,12 @@ state_ending_wait1_loop:
 	ldir
 
 state_ending_loop:
-	halt
+	ld c,1
+	call wait_for_interrupt
+
 	call update_keyboard_buffers
+	ld hl,game_cycle
+	inc (hl)
 
 	ld a,(ending_trigger_map)
 	or a
@@ -71,7 +73,7 @@ state_ending_loop:
 	jr z,state_ending_load_map3
 state_ending_loop_continue1:
 	ld hl,ending_roll_step
-	ld a,(interrupt_cycle)
+	ld a,(game_cycle)
 	rra
 	jr c,state_ending_loop_continue1a
 	inc (hl)
@@ -88,7 +90,6 @@ state_ending_loop_continue1a:
 	cp 203
 	jp nc,state_ending_roll_scroll_step
 state_ending_loop_continue2:
-
 	; text:
 	ld hl,ending_text_page_line_state
 	ld a,(hl)
@@ -438,7 +439,6 @@ state_ending_fade_in_line_continue:
 	    ld a,COLOR_WHITE*16
 	pop bc
 	call fast_FILVRM_only_right_half
-
 	jp state_ending_loop_continue3	
 
 

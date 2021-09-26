@@ -3,7 +3,7 @@ wood
 victorian
 2
 door-wood-sw 2 0 21 3
-door-wood-ne 2 0 24 0
+door-wood-ne 3 0 24 0
 13
 stool 2 2 0
 stool 2 4 0

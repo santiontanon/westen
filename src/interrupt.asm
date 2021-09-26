@@ -13,7 +13,7 @@ setup_custom_interrupt:
 ; ------------------------------------------------
 ; My interrupt handler:
 interrupt_callback:
-    push af
+;     push af
     push hl
         ;ld hl,vsyncs_since_last_frame
         ;ld a,(hl)
@@ -32,6 +32,6 @@ interrupt_callback:
         call update_sound
 ;         out (#2d),a
     pop hl
-    pop af
+;     pop af
     ei
     ret

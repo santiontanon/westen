@@ -24,7 +24,6 @@ setup_floor_grass:
 	inc (hl)
 
 setup_floor_grass_room1:
-
 	ld hl,room_width
 	ld (hl),4
 	call setup_floor_blue_tiles_generic
@@ -101,20 +100,22 @@ setup_floor_blue_tiles_loop_x:
 				add a, -SCREEN_HEIGHT
 				neg
 				add a,a
-				add a,e
-				ld iyl,a
+				push af
+					add a,e
+					ld iyl,a
 
-;                 int isoy = ((19-i)-start_y)*2 - ((32-j)-start_x);
-				ld a,(room_x)
-				add a,c
-				add a, -32
-				neg
-				ld e,a  ; e = 32 - ()
-				ld a,(room_y)
-				add a,b
-				add a, -SCREEN_HEIGHT
-				neg
-				add a,a
+	;                 int isoy = ((19-i)-start_y)*2 - ((32-j)-start_x);
+					ld a,(room_x)
+					add a,c
+					add a, -32
+					neg
+					ld e,a  ; e = 32 - ()
+				pop af
+; 				ld a,(room_y)
+; 				add a,b
+; 				add a, -SCREEN_HEIGHT
+; 				neg
+; 				add a,a
 				sub e
 				ld iyh,a
 

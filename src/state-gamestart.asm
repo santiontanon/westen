@@ -23,8 +23,12 @@ state_gamestart:
 	ld (hl),INVENTORY_WHITE_KEY
 	inc hl
 	ld (hl),INVENTORY_RED_KEY_H1
-; 	inc hl
-; 	ld (hl),INVENTORY_GUN
+	inc hl
+	ld (hl),INVENTORY_HEART
+	inc hl
+	ld (hl),INVENTORY_HEART
+	inc hl
+	ld (hl),INVENTORY_HEART
 ; 	inc hl
 ; 	ld (hl),INVENTORY_GREEN_KEY
 ; 	inc hl

@@ -250,41 +250,48 @@ update_enemies_spider_attack_not_done:
 	jp p,update_enemies_spider_attack_x_positive
 update_enemies_spider_attack_x_negative:
 	call update_enemy_dec_x
-	ld a,(iy+OBJECT_STRUCT_STATE_TIMER)
-	srl a
-	and #01
-	add a,6
-	ld (iy+OBJECT_STRUCT_FRAME),a
-	jr update_enemies_spider_attack_x_done
+	ld c,6
+	jr update_enemies_spider_attack_x_movement_continue
+; 	ld a,(iy+OBJECT_STRUCT_STATE_TIMER)
+; 	srl a
+; 	and #01
+; 	add a,c
+; 	ld (iy+OBJECT_STRUCT_FRAME),a
+; 	jr update_enemies_spider_attack_x_done
 
 update_enemies_spider_attack_x_positive:
 	call update_enemy_inc_x
+	ld c,2
+update_enemies_spider_attack_x_movement_continue:
 	ld a,(iy+OBJECT_STRUCT_STATE_TIMER)
 	srl a
 	and #01
-	add a,2
+	add a,c
 	ld (iy+OBJECT_STRUCT_FRAME),a
 
 update_enemies_spider_attack_x_done:
-
 	ld a,(player_iso_y)
 	sub (iy+OBJECT_STRUCT_PIXEL_ISO_Y)
 	jr z,update_enemies_spider_attack_y_done
 	jp p,update_enemies_spider_attack_y_positive
 update_enemies_spider_attack_y_negative:
 	call update_enemy_dec_y
-	ld a,(iy+OBJECT_STRUCT_STATE_TIMER)
-	srl a
-	and #01
-	ld (iy+OBJECT_STRUCT_FRAME),a
-	jr update_enemies_spider_attack_y_done
+	ld c,0
+	jr update_enemies_spider_attack_y_movement_continue
+; 	ld a,(iy+OBJECT_STRUCT_STATE_TIMER)
+; 	srl a
+; 	and #01
+; 	ld (iy+OBJECT_STRUCT_FRAME),a
+; 	jr update_enemies_spider_attack_y_done
 
 update_enemies_spider_attack_y_positive:
 	call update_enemy_inc_y
+	ld c,4
+update_enemies_spider_attack_y_movement_continue:	
 	ld a,(iy+OBJECT_STRUCT_STATE_TIMER)
 	srl a
 	and #01
-	add a,4
+	add a,c
 	ld (iy+OBJECT_STRUCT_FRAME),a
 update_enemies_spider_attack_y_done:
 	jp update_enemies_redraw

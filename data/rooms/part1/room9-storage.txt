@@ -3,11 +3,10 @@ blue_tiles_border
 blue_bricks
 1
 door-left-brick-stairs 4 2 8 1
-23
+22
 stairs-nw-1 2 4 0
 stairs-nw-2 4 4 0
-stool 2 6 0
-stool 4 6 0
+chair-left 2 6 0
 chair-left 4 2 0
 chair-right 5 2 0
 chair-left 7 2 0

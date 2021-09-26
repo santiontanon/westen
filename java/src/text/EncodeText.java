@@ -23,7 +23,8 @@ public class EncodeText {
 //    public static String compressor = "zx0";
     
     // maxBankSize is in bytes of text per bank
-    public static Pair<List<Integer>,List<Integer>> encodeTextInBanks(List<String> lines, PAKFont font, int maxBankSize, String outputFolder, HashMap<String, Pair<Integer, Integer>> ids, String compressor) throws Exception
+    public static Pair<List<Integer>,List<Integer>> encodeTextInBanks(List<String> lines, 
+            PAKFont font, int maxBankSize, String outputFolder, String prefix, HashMap<String, Pair<Integer, Integer>> ids, String compressor) throws Exception
     {
         List<Integer> sizes_before = new ArrayList<>();
         List<Integer> sizes_after = new ArrayList<>();
@@ -35,7 +36,7 @@ public class EncodeText {
                 bankLines.size()>=MAX_LINES_PER_BANK) {
                 // new bank:
                 System.out.println("   predicted text bank size: " + bankSize);
-                Pair<Integer,Integer> tmp = compressTextLines(bankLines, font, outputFolder, "textBank" + bank, compressor);
+                Pair<Integer,Integer> tmp = compressTextLines(bankLines, font, outputFolder, prefix + bank, compressor);
                 sizes_before.add(tmp.m_a);
                 sizes_after.add(tmp.m_b);
                 bankSize = 0;
@@ -48,7 +49,7 @@ public class EncodeText {
         }
 
         System.out.println("   predicted text bank size: " + bankSize);
-        Pair<Integer,Integer> tmp = compressTextLines(bankLines, font, outputFolder, "textBank" + bank, compressor);
+        Pair<Integer,Integer> tmp = compressTextLines(bankLines, font, outputFolder, prefix + bank, compressor);
         sizes_before.add(tmp.m_a);
         sizes_after.add(tmp.m_b);
         

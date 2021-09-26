@@ -19,7 +19,7 @@ check_player_collision_loop1:
 	or a
 	jr z,check_player_collision_loop_skip1
 	call check_8x8_collision_object
-	jp z,collision_player_hit
+	jr z,collision_player_hit
 check_player_collision_loop_skip1:
 	ex de,hl
 		ld de,OBJECT_STRUCT_SIZE

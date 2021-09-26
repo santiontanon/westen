@@ -23,12 +23,11 @@ state_game_roomstart:
 	xor a
 	ld (interrupt_cycle),a
 
+;     jp Execute_jump_to_ending
+
 state_game_loop:
-	ld a,(interrupt_cycle)
-	cp 2
-	jr c,state_game_loop
-	xor a
-	ld (interrupt_cycle),a
+	ld c,2
+	call wait_for_interrupt
 	
 	call update_keyboard_buffers
 	call update_player
@@ -49,6 +48,16 @@ state_game_loop:
 	jr z,state_game_loop
 	dec (hl)
 	jr state_game_loop
+
+
+;-----------------------------------------------
+wait_for_interrupt:
+	ld hl,interrupt_cycle
+	ld a,(hl)
+	cp c
+	jr c,wait_for_interrupt
+	ld (hl),0
+	ret
 
 
 ;-----------------------------------------------

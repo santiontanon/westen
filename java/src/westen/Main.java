@@ -20,6 +20,7 @@ public class Main {
         Sprites.main(args);
         Hud.main(args);
         Text.main(args);
+        TextES.main(args);
         Enemies.main(args);
         Inventory.main(args);
     }

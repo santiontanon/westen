@@ -82,7 +82,7 @@ public class Objects {
         generateObject(img, 16, 0, 2, 2, 
                        8, 8, 8, 1, 1, outputFolder + "/stone");
         generateObject(img, 18, 0, 1, 2, 
-                       4, 4, 4, 0, 2, outputFolder + "/flower");
+                       4, 4, 16, 0, 2, outputFolder + "/flower");
         generateObject(img, 16, 2, 2, 5, 
                        8, 8, 64, 1, 4, outputFolder + "/column");
         generateObject(img, 19, 0, 4, 3, 
@@ -112,7 +112,7 @@ public class Objects {
         generateObject(img, 25, 3, 3, 3, 
                        16, 1, 8, 1, 1, outputFolder + "/painting-right");
         generateObject(img, 30, 0, 2, 3, 
-                       8, 8, 32, 1, 2, outputFolder + "/hanger");
+                       8, 8, 20, 1, 2, outputFolder + "/hanger");
 //        generateObject(img, 28, 3, 2, 3, 
 //                       8, 8, 16, 1, 2, outputFolder + "/vase");
         generateObject(img, 0, 32, 2, 3, 

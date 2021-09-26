@@ -15,10 +15,12 @@ update_player:
 	dec (hl)
 	ld a,(player_state)
 	cp PLAYER_STATE_DEAD
-	jr z,update_player_check_gameover
+	jp z,update_player_check_gameover
 update_player_no_invulnerability:
 	ld a,(keyboard_line_state+KEY_BUTTON2_BYTE)
 	bit KEY_BUTTON2_BIT,a
+	jr z, update_player_no_use_or_jump
+	bit KEY_BUTTON2_BIT_ALTERNATIVE,a
 	jr z, update_player_no_use_or_jump
 	ld a,(player_state)
 	cp PLAYER_STATE_JUMPING
@@ -36,6 +38,8 @@ update_player_no_use_or_jump:
 
 	ld a,(keyboard_line_state+KEY_BUTTON2_BYTE)
 	bit KEY_BUTTON2_BIT,a
+	jr z, update_player_idle
+	bit KEY_BUTTON2_BIT_ALTERNATIVE,a
 	jr z, update_player_idle
 
 	ld a,(keyboard_line_state)
@@ -378,7 +382,7 @@ move_player_inc_x:
 move_player_dec_x:
 	ld hl,player_iso_x
 	ld a,(hl)
-	cp 8
+	cp 9
 	jr z, enter_door_nw
 
 	ld de,#00ff

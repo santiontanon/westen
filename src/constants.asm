@@ -245,7 +245,8 @@ KEY_BUTTON1_BIT:			equ 0
 
 KEY_BUTTON2_BYTE:			equ 1*2
 KEY_BUTTON2_BIT:			equ 2    ; M
-
+KEY_BUTTON2_BIT_ALTERNATIVE:equ 3    ; N (both N/M work!)
+    
 ; KEY_PAUSE_BYTE:				equ 2*2
 ; KEY_PAUSE_BIT:				equ 5
 

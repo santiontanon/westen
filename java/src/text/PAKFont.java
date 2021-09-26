@@ -214,5 +214,28 @@ public class PAKFont {
             }
         }
     }
+    
+    
+    public int stringWidth(String str) throws Exception
+    {
+        int width = 0;
+        
+        for(int i = 0;i<str.length();i++) {
+            boolean found = false;
+            int index = 0;
+            for(int j = 0;j<characters.size();j++) {
+                int index_line = characters.get(j).indexOf(str.charAt(i));
+                if (index_line >=0) {
+                    width += widths.get(index + index_line);
+                    found = true;
+                    break;
+                }
+                index += characters.get(j).length();
+            }
+            if (!found) throw new Exception("character '"+str.charAt(i)+"' in '"+str+"' not found!");
+        }
+        
+        return width;
+    }
         
 }

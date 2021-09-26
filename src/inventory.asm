@@ -2,8 +2,21 @@
 update_ui_control:
 	ld a,(keyboard_line_state+KEY_BUTTON2_BYTE)
 	bit KEY_BUTTON2_BIT,a
-	jr nz,update_ui_control_restore_ui_sprite
+	jr z,update_ui_control_button2_pressed
+	bit KEY_BUTTON2_BIT_ALTERNATIVE,a
+	jr z,update_ui_control_button2_pressed
 
+update_ui_control_restore_ui_sprite:
+	ld hl,inventory_pointer_sprite_attributes+3
+	ld a,(hl)
+	or a
+	ret nz
+	ld a,COLOR_WHITE
+	ld (hl),a
+	ld hl,SPRATR2+6*4+3
+	jp WRTVRM
+
+update_ui_control_button2_pressed:
 	; flash hud sprite:
 	ld hl,inventory_pointer_sprite_attributes+3
 	ld a,(game_cycle)
@@ -33,17 +46,6 @@ update_ui_control_sprite_set:
 	bit KEY_BUTTON1_BIT,a
 	jr nz,update_ui_input_button
 	ret
-
-
-update_ui_control_restore_ui_sprite:
-	ld hl,inventory_pointer_sprite_attributes+3
-	ld a,(hl)
-	or a
-	ret nz
-	ld a,COLOR_WHITE
-	ld (hl),a
-	ld hl,SPRATR2+6*4+3
-	jp WRTVRM
 
 
 ;-----------------------------------------------
@@ -598,6 +600,10 @@ inventory_fn_use_door_vampire1:
 	push ix
 		call state_password_lock
 	pop ix
+	ld a,(game_time_day)
+	cp 8
+	ret c  ; if player has not yet seen the cut scene, do not let the doors open
+
 	; check if it has the right password:
 	ld iy,state_vampire1_state
 	ld de,password_vampire1
@@ -731,8 +737,10 @@ inventory_fn_candle_entrypoint:
 
 
 inventory_fn_drop_room_full:
-	ld hl,SFX_ui_wrong
-	jp play_SFX_with_high_priority
+	; this should never happen!
+; 	ld hl,SFX_ui_wrong
+; 	jp play_SFX_with_high_priority
+	ret
 
 
 ;-----------------------------------------------
@@ -952,7 +960,7 @@ inventory_fn_letter3:
 	ld c,1
 	call update_time_day_if_needed
 inventory_fn_letter3_secret_already_revealed:
-	ld b,8*8
+	ld b,12*8
 	ld de,CHRTBL2+5*32*8+12*8
 	ld iyl,COLOR_YELLOW+COLOR_DARK_RED*16
 	ld a,TEXT_LETTER3_LINE1_SECRET_IDX
@@ -1035,8 +1043,13 @@ inventory_fn_oil_with_lamp:
 
 
 inventory_fn_heart:
-	ld (hl),0
+	ex de,hl
 	ld hl,player_max_health
+	ld a,(hl)
+	cp 5
+	ret z
+	xor a
+	ld (de),a
 	ld a,(hl)
 	cp 5
 	jr z,inventory_fn_heart_max
@@ -1084,6 +1097,9 @@ inventory_fn_candle:
 	ld a,(player_iso_z)
 	or a
 	jr nz,inventory_fn_candle_no_drop
+	ld a,(game_time_day)
+	cp 3
+	jr c,inventory_fn_candle_no_drop  ; if player has not seen the clue yet, do not let them place the candles
 	ld a,(state_current_room)
 	cp #18
 	jr z,inventory_fn_candle_ritual_room
