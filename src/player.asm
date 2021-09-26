@@ -8,6 +8,27 @@ hide_player:
 
 ;-----------------------------------------------
 update_player:
+	; check if player wants to change control scheme:
+	ld a,(keyboard_line_clicks+2)
+	bit 6,a  ; letter "Q"
+	jr z,update_player_continue
+
+	; toggle control mapping:
+	ld hl,(key_to_direction_mapping_ptr)
+	ld a,l
+	cp key_to_direction_mapping & 0xff
+	jr z,update_player_mapping_alt
+update_player_mapping_default:
+	ld hl,key_to_direction_mapping
+	jr update_player_mapping_continue
+update_player_mapping_alt:
+	ld hl,key_to_direction_mapping_alt
+update_player_mapping_continue:
+	ld (key_to_direction_mapping_ptr),hl
+	ld hl,SFX_ui_select
+	call play_SFX_with_high_priority
+
+update_player_continue:
 	ld hl,player_invulnerability
 	ld a,(hl)
 	or a
@@ -44,23 +65,31 @@ update_player_no_use_or_jump:
 
 	ld a,(keyboard_line_state)
 	and #f0
-	xor #f0
-	cp #20
+	ld hl,(key_to_direction_mapping_ptr)
+	cp (hl)
 	jp z,update_player_north
-	cp #a0
+	inc hl
+	cp (hl)
 	jp z,update_player_northeast
-	cp #80
+	inc hl
+	cp (hl)
 	jp z,update_player_east
-	cp #c0
+	inc hl
+	cp (hl)
 	jp z,update_player_southeast
-	cp #40
+	inc hl
+	cp (hl)
 	jp z,update_player_south
-	cp #50
+	inc hl
+	cp (hl)
 	jp z,update_player_southwest
-	cp #10
+	inc hl
+	cp (hl)
 	jp z,update_player_west
-	cp #30
+	inc hl
+	cp (hl)
 	jp z,update_player_northwest
+
 
 update_player_idle:
 	; idle:
@@ -161,22 +190,46 @@ update_player_air_movement:
 	inc (hl)
 	ld a,(keyboard_line_state)
 	and #f0
-	xor #f0
-	cp #20
+; 	xor #f0
+; 	cp #20
+; 	jp z,update_player_north_movement
+; 	cp #a0
+; 	jp z,update_player_northeast_movement
+; 	cp #80
+; 	jp z,update_player_east_movement
+; 	cp #c0
+; 	jp z,update_player_southeast_movement
+; 	cp #40
+; 	jp z,update_player_south_movement
+; 	cp #50
+; 	jp z,update_player_southwest_movement
+; 	cp #10
+; 	jp z,update_player_west_movement
+; 	cp #30
+; 	jp z,update_player_northwest_movement
+	ld hl,(key_to_direction_mapping_ptr)
+	cp (hl)
 	jp z,update_player_north_movement
-	cp #a0
+	inc hl
+	cp (hl)
 	jp z,update_player_northeast_movement
-	cp #80
+	inc hl
+	cp (hl)
 	jp z,update_player_east_movement
-	cp #c0
+	inc hl
+	cp (hl)
 	jp z,update_player_southeast_movement
-	cp #40
+	inc hl
+	cp (hl)
 	jp z,update_player_south_movement
-	cp #50
+	inc hl
+	cp (hl)
 	jp z,update_player_southwest_movement
-	cp #10
+	inc hl
+	cp (hl)
 	jp z,update_player_west_movement
-	cp #30
+	inc hl
+	cp (hl)
 	jp z,update_player_northwest_movement
 	ret
 

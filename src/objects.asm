@@ -720,8 +720,9 @@ remove_room_object_no_redraw:
 
 ;-----------------------------------------------
 find_new_object_ptr:
-	ld a,(n_objects)
-	ld b,a
+	ld hl,n_objects
+	ld b,(hl)
+	inc (hl)  ; we increase the number of objects in the room by one
 	ld de,OBJECT_STRUCT_SIZE
 	ld ix,objects
 find_new_object_ptr_loop:

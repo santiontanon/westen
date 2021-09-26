@@ -221,41 +221,48 @@ state_intro_find_door_loop_found:
 ; input:
 ; - hl: keystrokes ptr
 state_intro_cutscene:
-	push hl
-		ld a,#ff
-		ld hl,keyboard_line_state
-		ld de,keyboard_line_state+1
-		ld (hl),a
-		ld bc,5
-		ldir
-		; clicks:
-		xor a
-		ld (keyboard_line_clicks),a
-		ld (keyboard_line_clicks+2),a
-	pop hl
+    ld bc,(key_to_direction_mapping_ptr)
+    push bc
+        ; set the default direction mapping for the predefined cutscene keystrokes:
+        ld bc,key_to_direction_mapping
+        ld (key_to_direction_mapping_ptr),bc
+    	push hl
+    		ld a,#ff
+    		ld hl,keyboard_line_state
+    		ld de,keyboard_line_state+1
+    		ld (hl),a
+    		ld bc,5
+    		ldir
+    		; clicks:
+    		xor a
+    		ld (keyboard_line_clicks),a
+    		ld (keyboard_line_clicks+2),a
+    	pop hl
 state_intro_cutscene_loop1:
-	ld a,(hl)
-	or a
-	ret z
-	inc hl
-	ld b,(hl)
-	inc hl
-	ld (keyboard_line_state),a
+    	ld a,(hl)
+    	or a
+        jr z,state_intro_cutscene_done
+    	inc hl
+    	ld b,(hl)
+    	inc hl
+    	ld (keyboard_line_state),a
 state_intro_cutscene_loop2:
-	ld a,(interrupt_cycle)
-	cp 2
-	jr c,state_intro_cutscene_loop2
-	xor a
-	ld (interrupt_cycle),a
+        ld c,2
+        call wait_for_interrupt
 
-	push bc
-	push hl
-		call update_player
-		call draw_player
-	pop hl
-	pop bc
-	djnz state_intro_cutscene_loop2
-	jr state_intro_cutscene_loop1
+    	push bc
+    	push hl
+    		call update_player
+    		call draw_player
+    	pop hl
+    	pop bc
+    	djnz state_intro_cutscene_loop2
+    	jr state_intro_cutscene_loop1
+state_intro_cutscene_done:
+    pop bc
+    ; restore the player selected direction mapping
+    ld (key_to_direction_mapping_ptr),bc
+    ret
 
 
 ;-----------------------------------------------

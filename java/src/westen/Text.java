@@ -138,6 +138,7 @@ public class Text {
 
         addLineSafe(lines_with_constant, "Joystick / arrow keys to move.", "TUTORIAL1_LINE1", 17);
         addLineSafe(lines_with_constant, "Button 1 / space to jump.", "TUTORIAL1_LINE2", 17);
+        addLineSafe(lines_with_constant, "Q to toggle direction mapping.", "TUTORIAL1_LINE3", 17);
 
         addLineSafe(lines_with_constant, "While holding Button 2 / M:", "TUTORIAL2_LINE1", 18);
         addLineSafe(lines_with_constant, "- Joystick / arrow keys to", "TUTORIAL2_LINE2", 18);

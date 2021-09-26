@@ -1242,8 +1242,6 @@ spawn_global_items:
 spawn_global_items_candle1:
 	push hl
 		call find_new_object_ptr
-		ld hl,n_objects
-		inc (hl)
 		ld (ix),OBJECT_TYPE_CANDLE1
 spawn_global_items_candle_entry_point:
 		ld de,object_candle_zx0
@@ -1263,8 +1261,6 @@ spawn_global_items_candle_entry_point:
 spawn_global_items_candle2:
 	push hl
 		call find_new_object_ptr
-		ld hl,n_objects
-		inc (hl)
 		ld (ix),OBJECT_TYPE_CANDLE2
 		jr spawn_global_items_candle_entry_point
 
@@ -1272,7 +1268,5 @@ spawn_global_items_candle2:
 spawn_global_items_candle3:
 	push hl
 		call find_new_object_ptr
-		ld hl,n_objects
-		inc (hl)
 		ld (ix),OBJECT_TYPE_CANDLE3
 		jr spawn_global_items_candle_entry_point

@@ -23,8 +23,6 @@ state_game_roomstart:
 	xor a
 	ld (interrupt_cycle),a
 
-;     jp Execute_jump_to_ending
-
 state_game_loop:
 	ld c,2
 	call wait_for_interrupt
@@ -33,8 +31,7 @@ state_game_loop:
 	call update_player
 	call update_ui_control
 	call draw_player
-	call update_objects  ; avg: 56K, max 125K
-; 	call update_object_drawing_order
+	call update_objects
 	call update_object_drawing_order_n_times
 	call update_hud_messages
 	call update_vampire
@@ -111,8 +108,6 @@ update_vampire_seen:
 	push bc
 	push de
 		call find_new_object_ptr
-		ld hl,n_objects
-		inc (hl)
 	pop de
 	pop bc
 

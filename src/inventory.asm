@@ -203,7 +203,6 @@ inventory_fn_use:
 
 inventory_fn_use_nothing_to_pickup:
 	; check if there is any item to use nearby:
-
 	ld de,OBJECT_STRUCT_SIZE
 	ld ix,objects
 	ld a,(n_objects)
@@ -464,22 +463,20 @@ inventory_fn_use_pickup_oil:
 	jp inventory_fn_use_pickup_continue
 
 inventory_fn_use_pickup_heart1:
+	ld de,state_heart1_taken
+inventory_fn_use_pickup_heart1_continue:
 	ld a,1
-	ld (state_heart1_taken),a 
+	ld (de),a
 	ld a,INVENTORY_HEART
 	jp inventory_fn_use_pickup_continue
 
 inventory_fn_use_pickup_heart2:
-	ld a,1
-	ld (state_heart2_taken),a 
-	ld a,INVENTORY_HEART
-	jp inventory_fn_use_pickup_continue
+	ld de,state_heart2_taken
+	jr inventory_fn_use_pickup_heart1_continue
 
 inventory_fn_use_pickup_heart3:
-	ld a,1
-	ld (state_heart3_taken),a 
-	ld a,INVENTORY_HEART
-	jp inventory_fn_use_pickup_continue
+	ld de,state_heart3_taken
+	jr inventory_fn_use_pickup_heart1_continue
 
 inventory_fn_use_pickup_book:
 	ld a,1
@@ -488,22 +485,20 @@ inventory_fn_use_pickup_book:
 	jp inventory_fn_use_pickup_continue
 
 inventory_fn_use_pickup_candle1:
+	ld de,state_candle1_position
+inventory_fn_use_pickup_candle1_continue:
 	ld a,#ff
 	ld (state_candle1_position),a 
 	ld a,INVENTORY_CANDLE
 	jp inventory_fn_use_pickup_continue
 
 inventory_fn_use_pickup_candle2:
-	ld a,#ff
-	ld (state_candle2_position),a 
-	ld a,INVENTORY_CANDLE
-	jp inventory_fn_use_pickup_continue
+	ld de,state_candle2_position
+	jr inventory_fn_use_pickup_candle1_continue
 
 inventory_fn_use_pickup_candle3:
-	ld a,#ff
-	ld (state_candle3_position),a 
-	ld a,INVENTORY_CANDLE
-	jr inventory_fn_use_pickup_continue
+	ld de,state_candle3_position
+	jr inventory_fn_use_pickup_candle1_continue
 
 inventory_fn_use_pickup_green_key:
 	ld a,1
@@ -546,40 +541,36 @@ inventory_fn_use_pickup_hammer:
 	jr inventory_fn_use_pickup_continue
 
 inventory_fn_use_pickup_garlic1:
+	ld de,state_crate_garlic1
+inventory_fn_use_pickup_garlic1_continue
 	ld a,2
-	ld (state_crate_garlic1),a 
+	ld (de),a 
 	ld a,INVENTORY_GARLIC
 	jr inventory_fn_use_pickup_continue
 
 inventory_fn_use_pickup_garlic2:
-	ld a,2
-	ld (state_crate_garlic2),a 
-	ld a,INVENTORY_GARLIC
-	jr inventory_fn_use_pickup_continue
+	ld de,state_crate_garlic2
+	jr inventory_fn_use_pickup_garlic1_continue
 
 inventory_fn_use_pickup_garlic3:
-	ld a,2
-	ld (state_crate_garlic3),a 
-	ld a,INVENTORY_GARLIC
-	jr inventory_fn_use_pickup_continue
+	ld de,state_crate_garlic3
+	jr inventory_fn_use_pickup_garlic1_continue
 
 inventory_fn_use_pickup_stake1:
+	ld de,state_crate_stake1
+inventory_fn_use_pickup_stake1_continue:
 	ld a,2
-	ld (state_crate_stake1),a 
+	ld (de),a 
 	ld a,INVENTORY_STAKE
 	jr inventory_fn_use_pickup_continue
 
 inventory_fn_use_pickup_stake2:
-	ld a,2
-	ld (state_crate_stake2),a 
-	ld a,INVENTORY_STAKE
-	jr inventory_fn_use_pickup_continue
+	ld de,state_crate_stake2
+	jr inventory_fn_use_pickup_stake1_continue
 
 inventory_fn_use_pickup_stake3:
-	ld a,2
-	ld (state_crate_stake3),a 
-	ld a,INVENTORY_STAKE
-	jr inventory_fn_use_pickup_continue
+	ld de,state_crate_stake3
+	jr inventory_fn_use_pickup_stake1_continue
 
 inventory_fn_use_pickup_continue:
 	ld (hl),a
@@ -641,6 +632,7 @@ inventory_fn_use_door_vampire1_loop:
 	ld bc, TEXT_OPEN_VAMPIRE1_DOOR2_BANK + 256*TEXT_OPEN_VAMPIRE1_DOOR2_IDX
 	call queue_hud_message
 inventory_fn_use_door_vampire1_no_diary:
+inventory_fn_use_door_vampire1_no_note2:	
 	ld hl,SFX_door_open
 	jp play_SFX_with_high_priority
 
@@ -675,12 +667,13 @@ inventory_fn_use_door_vampire1_no_note1:
 	jr nz,inventory_fn_use_door_vampire1_no_note2
 	ld (hl),0
 	call hud_update_inventory
-inventory_fn_use_door_vampire1_no_note2:
-	ld hl,SFX_door_open
-	jp play_SFX_with_high_priority
+	jr inventory_fn_use_door_vampire1_no_note2
 
 
 ;-----------------------------------------------
+; input:
+; - ix:	ptr yo the object struct to use (with object type ID already set)
+; - de: ptr to the compressed object data
 inventory_spawn_object:
 	ld a,(player_iso_x)
 	add a,4
@@ -702,24 +695,7 @@ inventory_spawn_object:
 
 
 ;-----------------------------------------------
-inventory_fn_stool:
-	ld a,(n_objects)
-	cp MAX_ROOM_OBJECTS
-	jr z,inventory_fn_drop_room_full
-
-	ld (hl),0  ; lose the stool from inventory
-
-	; spawn a new stool:
-	call find_new_object_ptr
-	ld hl,n_objects
-	inc (hl)
-
-	ld (ix),OBJECT_TYPE_STOOL
-	ld de,object_stool_zx0
-	call inventory_spawn_object
-
-inventory_fn_candle_entrypoint:	
-	; redraw area:
+redraw_area_after_dropped_item:
 	ld e,(ix+OBJECT_STRUCT_SCREEN_TILE_X)
 	ld d,(ix+OBJECT_STRUCT_SCREEN_TILE_Y)
 	ld bc,#0302
@@ -728,7 +704,28 @@ inventory_fn_candle_entrypoint:
 		call update_object_drawing_order_n_times
 	pop bc
 	pop de	
-	call render_room_rectangle_safe
+	jp render_room_rectangle_safe
+
+
+;-----------------------------------------------
+inventory_fn_stool:
+	ld a,(n_objects)
+	cp MAX_ROOM_OBJECTS
+; 	jr z,inventory_fn_drop_room_full
+	ret z
+
+	ld (hl),0  ; lose the stool from inventory
+
+	; spawn a new stool:
+	call find_new_object_ptr
+
+	ld (ix),OBJECT_TYPE_STOOL
+	ld de,object_stool_zx0
+	call inventory_spawn_object
+
+inventory_fn_candle_entrypoint:	
+	; redraw area:
+	call redraw_area_after_dropped_item
 
 	ld hl,player_iso_z
 	ld a,(hl)
@@ -741,11 +738,11 @@ inventory_fn_candle_entrypoint:
 ; 	jr inventory_fn_use_back_to_jump
 
 
-inventory_fn_drop_room_full:
+; inventory_fn_drop_room_full:
 	; this should never happen!
 ; 	ld hl,SFX_ui_wrong
 ; 	jp play_SFX_with_high_priority
-	ret
+; 	ret
 
 
 ;-----------------------------------------------
@@ -911,11 +908,7 @@ inventory_fn_gun:
 	ld de, bullet_bin
 	ld a,(player_direction)
 	ld (ix+OBJECT_STRUCT_STATE),a
-	call load_room_init_object_ptr_set_decompressed
-
-	ld hl,n_objects
-	inc (hl)
-	ret
+	jp load_room_init_object_ptr_set_decompressed
 
 
 inventory_fn_red_key_half:
@@ -1114,38 +1107,21 @@ inventory_fn_candle_no_drop:
 	jp queue_hud_message
 
 inventory_fn_candle_ritual_room:
-	ld a,(n_objects)
-	cp MAX_ROOM_OBJECTS
-	jp z,inventory_fn_drop_room_full
+	; No need to check for this, this room is never full:
+; 	ld a,(n_objects)
+; 	cp MAX_ROOM_OBJECTS
+; 	jp z,inventory_fn_drop_room_full
+; 	ret z
 
 	ld (hl),0  ; lose the item from inventory
 	call hud_update_inventory
 
 	; spawn a new candle:
 	call find_new_object_ptr
-	ld hl,n_objects
-	inc (hl)
 
 	ld (ix),OBJECT_TYPE_CANDLE1
 	ld de,object_candle_zx0
 	call inventory_spawn_object
-; 	ld a,(player_iso_x)
-; 	add a,4
-; 	rrca
-; 	rrca
-; 	rrca
-; 	and #1f
-; 	ld (ix+OBJECT_STRUCT_PIXEL_ISO_X),a
-; 	ld a,(player_iso_y)
-; 	add a,4
-; 	rrca
-; 	rrca
-; 	rrca
-; 	and #1f
-; 	ld (ix+OBJECT_STRUCT_PIXEL_ISO_Y),a
-; 	ld a,(player_iso_z)
-; 	ld (ix+OBJECT_STRUCT_PIXEL_ISO_Z),a
-; 	call load_room_init_object_ptr_set
 
 	; mark the position of the candle:
 	ld hl,state_candle1_position
@@ -1531,8 +1507,6 @@ inventory_fn_hammer_garlic_crate_continue:
 
 	; spawn garlic:
 	call find_new_object_ptr
-	ld hl,n_objects
-	inc (hl)
 
 	ld de,object_garlic_zx0
 inventory_fn_hammer_crate_continue:	
@@ -1555,15 +1529,7 @@ inventory_fn_hammer_crate_continue:
 	call load_room_init_object_ptr_set
 
 	; redraw area:
-	ld e,(ix+OBJECT_STRUCT_SCREEN_TILE_X)
-	ld d,(ix+OBJECT_STRUCT_SCREEN_TILE_Y)
-	ld bc,#0302
-	push de
-	push bc
-		call update_object_drawing_order_n_times
-	pop bc
-	pop de	
-	call render_room_rectangle_safe
+	call redraw_area_after_dropped_item
 
 	ld bc, TEXT_USE_HAMMER2_BANK + 256*TEXT_USE_HAMMER2_IDX
 	jp queue_hud_message
@@ -1609,8 +1575,6 @@ inventory_fn_hammer_stake_crate_continue:
 
 	; spawn stake:
 	call find_new_object_ptr
-	ld hl,n_objects
-	inc (hl)
 
 	ld de,object_stake_zx0
 	jp inventory_fn_hammer_crate_continue
@@ -1747,6 +1711,7 @@ inventory_fn_rubbed_stake_kill_vampire1:
 	ld (state_vampire1_state),a
 	ld (hl),INVENTORY_VAMPIRE1_NOTE
 	ld bc, TEXT_FIND_VAMPIRE_NOTE_BANK + 256*TEXT_FIND_VAMPIRE_NOTE_IDX
+inventory_fn_rubbed_stake_kill_vampire2_entrypoint:
 	call queue_hud_message
 	jp hud_update_inventory
 
@@ -1755,8 +1720,9 @@ inventory_fn_rubbed_stake_kill_vampire2:
 	ld (state_vampire2_state),a
 	ld (hl),INVENTORY_VAMPIRE2_NOTE
 	ld bc, TEXT_FIND_VAMPIRE_NOTE_BANK + 256*TEXT_FIND_VAMPIRE_NOTE_IDX
-	call queue_hud_message
-	jp hud_update_inventory
+	jr inventory_fn_rubbed_stake_kill_vampire2_entrypoint
+; 	call queue_hud_message
+; 	jp hud_update_inventory
 
 
 inventory_object_position_to_tiles:
@@ -1786,8 +1752,9 @@ inventory_fn_vampire1_note:
 	ld hl,vampire1_note_lines
 	ld b,24*8
 	ld de,CHRTBL2+5*32*8+4*8
-	ld iyl,COLOR_YELLOW
 	ld a,9
+inventory_fn_vampire2_note_entrypoint:
+	ld iyl,COLOR_YELLOW
 	call render_letter_text
 	; wait for button:
 	call wait_for_space_updating_messages
@@ -1814,16 +1781,17 @@ inventory_fn_vampire2_note:
 	ld hl,vampire2_note_lines
 	ld b,22*8
 	ld de,CHRTBL2+6*32*8+5*8
-	ld iyl,COLOR_YELLOW
 	ld a,5
-	call render_letter_text
-	; wait for button:
-	call wait_for_space_updating_messages
+	jr inventory_fn_vampire2_note_entrypoint
+; 	ld iyl,COLOR_YELLOW
+; 	call render_letter_text
+; 	; wait for button:
+; 	call wait_for_space_updating_messages
 
-	; redraw room again:
-	ld de,4 + 5*256
-	ld bc,12+7*256
-	call render_room_rectangle
-	ld de,16 + 5*256
-	ld bc,12+7*256
-	jp render_room_rectangle
+; 	; redraw room again:
+; 	ld de,4 + 5*256
+; 	ld bc,12+7*256
+; 	call render_room_rectangle
+; 	ld de,16 + 5*256
+; 	ld bc,12+7*256
+; 	jp render_room_rectangle

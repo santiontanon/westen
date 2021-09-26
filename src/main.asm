@@ -356,6 +356,10 @@ Execute_set_song_speeds_50Hz:
     ld (hl),10  ; ending
 Execute_song_speeds_set:
 
+    ; set default key mapping:
+    ld hl,key_to_direction_mapping
+    ld (key_to_direction_mapping_ptr),hl
+
     ; Init sound engine:
     call StopMusic
     call setup_custom_interrupt
@@ -936,6 +940,12 @@ candle_initial_positions:
     db 24, 8, 4, 0
 
 
+key_to_direction_mapping:
+    db #d0, #50, #70, #30, #b0, #a0, #e0, #c0
+key_to_direction_mapping_alt:
+    db #c0, #d0, #50, #70, #30, #b0, #a0, #e0
+
+
 ; compressed code goes at the very end, so that when we include it back, it does not change the labels!
 
 ; intro:
@@ -999,6 +1009,7 @@ isComputer50HzOr60Hz:       ds virtual 1        ; 0: 50Hz, 1: 60Hz
 interrupt_cycle:            ds virtual 1
 ; randSeedIndex:              ds virtual 1
 ; randData:                   ds virtual 2
+key_to_direction_mapping_ptr:   ds virtual 2
 
 ; Room variables:
 room_x:                     ds virtual 1

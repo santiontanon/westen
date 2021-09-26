@@ -137,6 +137,7 @@ public class TextES {
 
         addLineSafe(lines_with_constant, "Joystick / cursores: caminar.", "TUTORIAL1_LINE1", 17);
         addLineSafe(lines_with_constant, "Botón 1 / espacio: saltar.", "TUTORIAL1_LINE2", 17);
+        addLineSafe(lines_with_constant, "Q cambia mapeo de direcciones.", "TUTORIAL1_LINE3", 17);
 
         addLineSafe(lines_with_constant, "Mientras pulsas el botón 2 / M:", "TUTORIAL2_LINE1", 18);
         addLineSafe(lines_with_constant, "- Joystick / cursores para", "TUTORIAL2_LINE2", 18);
