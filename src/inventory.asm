@@ -681,20 +681,7 @@ inventory_fn_use_door_vampire1_no_note2:
 
 
 ;-----------------------------------------------
-inventory_fn_stool:
-	ld a,(n_objects)
-	cp MAX_ROOM_OBJECTS
-	jr z,inventory_fn_drop_room_full
-
-	ld (hl),0  ; lose the stool from inventory
-
-	; spawn a new stool:
-	call find_new_object_ptr
-	ld hl,n_objects
-	inc (hl)
-
-	ld (ix),OBJECT_TYPE_STOOL
-	ld de,object_stool_zx0
+inventory_spawn_object:
 	ld a,(player_iso_x)
 	add a,4
 	rrca
@@ -711,7 +698,25 @@ inventory_fn_stool:
 	ld (ix+OBJECT_STRUCT_PIXEL_ISO_Y),a
 	ld a,(player_iso_z)
 	ld (ix+OBJECT_STRUCT_PIXEL_ISO_Z),a
-	call load_room_init_object_ptr_set
+	jp load_room_init_object_ptr_set
+
+
+;-----------------------------------------------
+inventory_fn_stool:
+	ld a,(n_objects)
+	cp MAX_ROOM_OBJECTS
+	jr z,inventory_fn_drop_room_full
+
+	ld (hl),0  ; lose the stool from inventory
+
+	; spawn a new stool:
+	call find_new_object_ptr
+	ld hl,n_objects
+	inc (hl)
+
+	ld (ix),OBJECT_TYPE_STOOL
+	ld de,object_stool_zx0
+	call inventory_spawn_object
 
 inventory_fn_candle_entrypoint:	
 	; redraw area:
@@ -1123,23 +1128,24 @@ inventory_fn_candle_ritual_room:
 
 	ld (ix),OBJECT_TYPE_CANDLE1
 	ld de,object_candle_zx0
-	ld a,(player_iso_x)
-	add a,4
-	rrca
-	rrca
-	rrca
-	and #1f
-	ld (ix+OBJECT_STRUCT_PIXEL_ISO_X),a
-	ld a,(player_iso_y)
-	add a,4
-	rrca
-	rrca
-	rrca
-	and #1f
-	ld (ix+OBJECT_STRUCT_PIXEL_ISO_Y),a
-	ld a,(player_iso_z)
-	ld (ix+OBJECT_STRUCT_PIXEL_ISO_Z),a
-	call load_room_init_object_ptr_set
+	call inventory_spawn_object
+; 	ld a,(player_iso_x)
+; 	add a,4
+; 	rrca
+; 	rrca
+; 	rrca
+; 	and #1f
+; 	ld (ix+OBJECT_STRUCT_PIXEL_ISO_X),a
+; 	ld a,(player_iso_y)
+; 	add a,4
+; 	rrca
+; 	rrca
+; 	rrca
+; 	and #1f
+; 	ld (ix+OBJECT_STRUCT_PIXEL_ISO_Y),a
+; 	ld a,(player_iso_z)
+; 	ld (ix+OBJECT_STRUCT_PIXEL_ISO_Z),a
+; 	call load_room_init_object_ptr_set
 
 	; mark the position of the candle:
 	ld hl,state_candle1_position
@@ -1676,28 +1682,31 @@ inventory_fn_rubbed_stake_vampire_room_awake:
 
 inventory_fn_rubbed_stake_vampire_room_sleeping:
 	; check if we are near a coffin2:
-	ld de,OBJECT_STRUCT_SIZE
-	ld ix,objects
-	push hl
-		ld hl,n_objects
-		ld b,(hl)
-	pop hl
-inventory_fn_rubbed_stake_loop:
-	ld a,(ix)
-	cp OBJECT_TYPE_COFFIN2
-	jr z,inventory_fn_rubbed_stake_loop_found
-inventory_fn_rubbed_stake_loop_next:
-	add ix,de
-	djnz inventory_fn_rubbed_stake_loop
+	ld a,OBJECT_TYPE_COFFIN2
+	call find_closeby_room_object
+	jr z,inventory_fn_rubbed_stake_vampire_room_sleeping_found
 	ld bc, TEXT_USE_RUBBED_STAKE_TOO_FAR_BANK + 256*TEXT_USE_RUBBED_STAKE_TOO_FAR_IDX
 	jp queue_hud_message
-inventory_fn_rubbed_stake_loop_found:
-	call check_if_object_close_by
-	jr nz,inventory_fn_rubbed_stake_loop_next
+inventory_fn_rubbed_stake_vampire_room_sleeping_found:
 
 	; kill the vampire!!!
 	ld (hl),0  ; lose the stake
 	push hl
+	    ; swap with a closed coffin:
+		ld (ix),#ff ; this will force decompression
+		call inventory_object_position_to_tiles
+		ld de,object_coffin2_zx0
+		call load_room_init_object_ptr_set
+		ld (ix),OBJECT_TYPE_COFFIN2
+
+		ld a,OBJECT_TYPE_COFFIN1
+		call find_closeby_room_object
+		ld (ix),#fe ; this will force decompression
+		call inventory_object_position_to_tiles
+		ld de,object_coffin1_zx0
+		call load_room_init_object_ptr_set
+		ld (ix),OBJECT_TYPE_COFFIN1
+
 		ld bc, TEXT_USE_RUBBED_STAKE_KILL_BANK + 256*TEXT_USE_RUBBED_STAKE_KILL_IDX
 		call queue_hud_message
 
@@ -1748,6 +1757,20 @@ inventory_fn_rubbed_stake_kill_vampire2:
 	ld bc, TEXT_FIND_VAMPIRE_NOTE_BANK + 256*TEXT_FIND_VAMPIRE_NOTE_IDX
 	call queue_hud_message
 	jp hud_update_inventory
+
+
+inventory_object_position_to_tiles:
+	ld a,(ix+OBJECT_STRUCT_PIXEL_ISO_X)
+	rrca
+	rrca
+	rrca
+	ld (ix+OBJECT_STRUCT_PIXEL_ISO_X),a
+	ld a,(ix+OBJECT_STRUCT_PIXEL_ISO_Y)
+	rrca
+	rrca
+	rrca
+	ld (ix+OBJECT_STRUCT_PIXEL_ISO_Y),a
+	ret
 
 
 inventory_fn_vampire1_note:

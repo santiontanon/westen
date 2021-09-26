@@ -728,3 +728,30 @@ find_new_object_ptr_loop:
 	add ix,de
 	djnz find_new_object_ptr_loop
 	ret
+
+
+;-----------------------------------------------
+; input: 
+; - a: object ID to find
+; returns:
+; - z: found (and pointer in ix)
+; - nz: not found
+find_closeby_room_object:
+	ld de,OBJECT_STRUCT_SIZE
+	ld ix,objects
+	push hl
+		ld hl,n_objects
+		ld b,(hl)
+	pop hl
+find_room_object_loop:
+	cp (ix)
+	jr z,find_room_object_loop_found
+find_room_object_loop_next:
+	add ix,de
+	djnz find_room_object_loop
+	or 1  ; nz: not found
+	ret
+find_room_object_loop_found:
+	call check_if_object_close_by
+	jr nz,find_room_object_loop_next
+	ret  ; z: found

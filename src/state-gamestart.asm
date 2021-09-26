@@ -23,12 +23,12 @@ state_gamestart:
 	ld (hl),INVENTORY_WHITE_KEY
 	inc hl
 	ld (hl),INVENTORY_RED_KEY_H1
-	inc hl
-	ld (hl),INVENTORY_HEART
-	inc hl
-	ld (hl),INVENTORY_HEART
-	inc hl
-	ld (hl),INVENTORY_HEART
+; 	inc hl
+; 	ld (hl),INVENTORY_HEART
+; 	inc hl
+; 	ld (hl),INVENTORY_HEART
+; 	inc hl
+; 	ld (hl),INVENTORY_HEART
 ; 	inc hl
 ; 	ld (hl),INVENTORY_GREEN_KEY
 ; 	inc hl
@@ -48,8 +48,8 @@ state_gamestart:
 ; 	ld hl,state_lab_notes_taken
 ; 	ld (hl),2
 ; 	ld hl,map3_zx0_page1
-; 	ld de,10 + 0*256  ; c: room, b: door
-; 	ld a,16*2 + 10
+; 	ld de,9 + 0*256  ; c: room, b: door
+; 	ld a,16*2 + 9
 ; 	ld (state_current_room),a
 ; 	call teleport_player_to_room
 

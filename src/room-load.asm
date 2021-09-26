@@ -707,19 +707,19 @@ load_room_init_object_coffin1:
 	jr z,load_room_init_object_coffin1_vampire2
 	; vampire 3
 	ld a,(state_vampire3_state)
-	cp 2  ; campire dead
+	cp 2  ; vampire dead
 	jp z, load_room_init_object_ptr_set
 	ld de,coffin_vampire_1_zx0
 	jp load_room_init_object_ptr_set
 load_room_init_object_coffin1_vampire1:
 	ld a,(state_vampire1_state)
-	cp 2  ; campire dead
+	cp 2  ; vampire dead
 	jp z, load_room_init_object_ptr_set
 	ld de,coffin_vampire_1_zx0
 	jp load_room_init_object_ptr_set
 load_room_init_object_coffin1_vampire2:
 	ld a,(state_vampire2_state)
-	cp 2  ; campire dead
+	cp 2  ; vampire dead
 	jp z, load_room_init_object_ptr_set
 	ld de,coffin_vampire_1_zx0
 	jp load_room_init_object_ptr_set
@@ -738,19 +738,19 @@ load_room_init_object_coffin2:
 	jr z,load_room_init_object_coffin2_vampire2
 	; vampire 3
 	ld a,(state_vampire3_state)
-	cp 2  ; campire dead
+	cp 2  ; vampire dead
 	jp z, load_room_init_object_ptr_set
 	ld de,coffin_vampire_2_zx0
 	jp load_room_init_object_ptr_set
 load_room_init_object_coffin2_vampire1:
 	ld a,(state_vampire1_state)
-	cp 2  ; campire dead
+	cp 2  ; vampire dead
 	jp z, load_room_init_object_ptr_set
 	ld de,coffin_vampire_2_zx0
 	jp load_room_init_object_ptr_set
 load_room_init_object_coffin2_vampire2:
 	ld a,(state_vampire2_state)
-	cp 2  ; campire dead
+	cp 2  ; vampire dead
 	jp z, load_room_init_object_ptr_set
 	ld de,coffin_vampire_2_zx0
 	jp load_room_init_object_ptr_set
