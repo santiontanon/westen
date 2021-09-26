@@ -1,10 +1,13 @@
 ## Westen House (MSX) by Santiago Ontañón Villar
 
-Download latest compiled ROMs (v1.2) from: https://github.com/santiontanon/westen/releases/tag/v1.2
+Download latest compiled ROMs (v1.3) from (Ensligh ans Spanish versions available): https://github.com/santiontanon/westen/releases/tag/v1.3
+
 
 You will need an MSX emulator to play the game on a PC, for example OpenMSX: http://openmsx.org
 
 A game video can be seen here: https://youtu.be/weFJe88oebA
+
+Or you can play directly on your browser thanks to Arnaud De Klerk (TFH)!: https://homebrew.file-hunter.com/index.php?id=westernhouse
 
 ## Introduction
 
