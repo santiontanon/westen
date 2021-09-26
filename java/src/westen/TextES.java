@@ -51,7 +51,7 @@ public class TextES {
         addLineSafe(lines_with_constant, "Carta para usted, profesor", "INTRO_MSG4", 16);
         addLineSafe(lines_with_constant, "Gracias Richard!", "INTRO_MSG5", 12);
         addLineSafe(lines_with_constant, "A ver que dice!", "INTRO_MSG6", 16);
-        addLineSafe(lines_with_constant, "Malísias notícias!", "INTRO_MSG7", 12);
+        addLineSafe(lines_with_constant, "Malísimas noticias!", "INTRO_MSG7", 12);
         addLineSafe(lines_with_constant, "JW era un gran amigo!", "INTRO_MSG8", 12);
         addLineSafe(lines_with_constant, "Debo ir de inmediato!", "INTRO_MSG9", 14);
         
@@ -60,27 +60,27 @@ public class TextES {
         addLineSafe(lines_with_constant, "Westen, fallecido el 16 de octubre. En su voluntad,","LETTER1_LINE3", 28);
         addLineSafe(lines_with_constant, "El Sr. Westen le dejó su cuaderno científico. Y","LETTER1_LINE4", 28);
         addLineSafe(lines_with_constant, "también una carta, que le adjuntamos aquí.","LETTER1_LINE5", 28);
-        addLineSafe(lines_with_constant, "Le informamos también que la Señora Lucy Westen","LETTER1_LINE6", 28);
+        addLineSafe(lines_with_constant, "Le informamos también que la Señora Lucy Westen","LETTER1_LINE6", 28); // SUGGESTION: "informar de que" instead of "infomar que"
         addLineSafe(lines_with_constant, "tomará posesión de la casa el 1 de diciembre.","LETTER1_LINE7", 28);
         
 //        addLineSafe(lines_with_constant, "Dear Ed.","LETTER2_LINE1");
-        addLineSafe(lines_with_constant, "Si está leyendo ésto, probablemente estoy","LETTER2_LINE2", 24);
+        addLineSafe(lines_with_constant, "Si está leyendo esto, probablemente estoy","LETTER2_LINE2", 24);
         addLineSafe(lines_with_constant, "muerto. Debe encontrar mi cuaderno antes","LETTER2_LINE3", 24);
         addLineSafe(lines_with_constant, "de que mi hermana Lucy tome posesión de la","LETTER2_LINE4", 24);
-        addLineSafe(lines_with_constant, "casa. Solo usted es capaz de comprenderlo!","LETTER2_LINE5", 24);
-        addLineSafe(lines_with_constant, "Le adjunto la llave de la mansión Westen, ","LETTER2_LINE6", 24);
+        addLineSafe(lines_with_constant, "casa. Sólo usted es capaz de comprenderlo!","LETTER2_LINE5", 24);
+        addLineSafe(lines_with_constant, "Le adjunto la llave de la mansión Westen, ","LETTER2_LINE6", 24); // CHECK: spurious trailing space
         addLineSafe(lines_with_constant, "y parte de una llave que le será necesaria","LETTER2_LINE7", 24);
         addLineSafe(lines_with_constant, "para llegar a mi laboratorio. Por favor, es","LETTER2_LINE8", 24);
-        addLineSafe(lines_with_constant, "importante para mi.","LETTER2_LINE9", 24);
+        addLineSafe(lines_with_constant, "importante para mí.","LETTER2_LINE9", 24);
 //        addLineSafe(lines_with_constant, "JW","LETTER2_LINE10");
         
         addLineSafe(lines_with_constant, "Combinación: 15-30-10", "LETTER3_LINE1_SECRET", 12);
         addLineSafe(lines_with_constant, "Querido Ed,", "LETTER3_LINE1", 22);
-        addLineSafe(lines_with_constant, "Espero que encuentre esto ántes que mi", "LETTER3_LINE2", 22);
+        addLineSafe(lines_with_constant, "Espero que encuentre esto antes que mi", "LETTER3_LINE2", 22);
         addLineSafe(lines_with_constant, "familia. Contiene la clave que le llevará", "LETTER3_LINE3", 22);
-        addLineSafe(lines_with_constant, "a la segunda parte de la llave que tiene.", "LETTER3_LINE4", 22);
+        addLineSafe(lines_with_constant, "a la segunda parte de la llave que tiene.", "LETTER3_LINE4", 22); // SUGGESTION: "otra mitad" instead of "segunda parte"
         addLineSafe(lines_with_constant, "Usé tinta de limón. Usted sabrá qué", "LETTER3_LINE5", 22);
-        addLineSafe(lines_with_constant, "hacer. Pronto entenderá la prudéncia.", "LETTER3_LINE6", 22);
+        addLineSafe(lines_with_constant, "hacer. Pronto entenderá la prudencia.", "LETTER3_LINE6", 22);
         addLineSafe(lines_with_constant, "JW", "LETTER3_LINE7", 22);
         
 //        addLineSafe(lines_with_constant, "Querido Ed,", "LETTER4_LINE1");
@@ -92,15 +92,15 @@ public class TextES {
         addLineSafe(lines_with_constant, "sufrió un horrible accidente dos años atrás", "LETTER4_LINE7", 24);
         addLineSafe(lines_with_constant, "en un encuentro con una criatura a la que", "LETTER4_LINE8", 24);
         addLineSafe(lines_with_constant, "llaman un vampiro. Ed, son todos vampiros!", "LETTER4_LINE9", 24);
-        addLineSafe(lines_with_constant, "No murió tal como se reportó... y no está", "LETTER4_LINE10", 24);
+        addLineSafe(lines_with_constant, "No murió tal como se reportó... y no está", "LETTER4_LINE10", 24); // SUGGESTION: "informó" instead of "reportó"
         addLineSafe(lines_with_constant, "sola. Pero tengo un plan! Sé como matarlos!", "LETTER4_LINE11", 24);
         addLineSafe(lines_with_constant, "Busque sus ataudes, allí es donde duermen.", "LETTER4_LINE12", 24);
         addLineSafe(lines_with_constant, "Frótelos con ajo antes de que lleguen", "LETTER4_LINE13", 24);
         addLineSafe(lines_with_constant, "y así moriran mientras duermen! Pero", "LETTER4_LINE14", 24);
-        addLineSafe(lines_with_constant, "apresurese! Preparelo ántes de que lleguen!", "LETTER4_LINE15", 24);
+        addLineSafe(lines_with_constant, "apresurese! Prepárelo antes de que lleguen!", "LETTER4_LINE15", 24);
         addLineSafe(lines_with_constant, "Si se demora, matarlos será más difícil!", "LETTER4_LINE16", 24);
         addLineSafe(lines_with_constant, "Deberá clavar una estaca frotada con ajo", "LETTER4_LINE17", 24);
-        addLineSafe(lines_with_constant, "en su corazón, mienstras duermen!", "LETTER4_LINE18", 24);
+        addLineSafe(lines_with_constant, "en su corazón, mientras duermen!", "LETTER4_LINE18", 24);
         addLineSafe(lines_with_constant, "Espero que no deba recurrir a ese método...", "LETTER4_LINE19", 24);
         addLineSafe(lines_with_constant, "Le deseo suerte! JW", "LETTER4_LINE20", 24);
 
@@ -124,7 +124,7 @@ public class TextES {
         addLineSafe(lines_with_constant, "Diario de Arthur Holmwood.", "DIARY2_LINE1", 24);
 //        addLineSafe(lines_with_constant, "...", "DIARY2_LINE2", 24);
         addLineSafe(lines_with_constant, "26 de junio, 1897", "DIARY2_LINE3", 24);
-        addLineSafe(lines_with_constant, "My amada por fin me ha convertido. Estoy", "DIARY2_LINE4", 24);
+        addLineSafe(lines_with_constant, "Mi amada por fin me ha convertido. Estoy", "DIARY2_LINE4", 24);
         addLineSafe(lines_with_constant, "en éxtasis. Ahora necesito escoger nombre.", "DIARY2_LINE5", 24);
         addLineSafe(lines_with_constant, "Usaré su apellido para demostrarle mi", "DIARY2_LINE6", 24);
         addLineSafe(lines_with_constant, "devoción.", "DIARY2_LINE7", 24);
@@ -155,7 +155,7 @@ public class TextES {
         addLineSafe(lines_with_constant, "estás encima del objeto.", "TUTORIAL4_LINE6", 20);
 
         addLineSafe(lines_with_constant, "Acabo de llegar a la mansión Westen.", "GAME_START_MESSSAGE1", 19);
-        addLineSafe(lines_with_constant, "Ahora a buscar las notas de JW!", "GAME_START_MESSSAGE2", 19);        
+        addLineSafe(lines_with_constant, "Ahora a buscar las notas de JW!", "GAME_START_MESSSAGE2", 19); // SUGGESTION: comma: "Ahora, a buscar..."
         addLineSafe(lines_with_constant, "Dejaré los taburetes.", "DROP_STOOLS", 19);
         addLineSafe(lines_with_constant, "Una nota de JW! Vamos a leerla!", "LETTER3", 19);
 
@@ -183,7 +183,7 @@ public class TextES {
         addLineSafe(lines_with_constant, "Este baúl parece decorativo.", "USE_CHEST", 19);
         addLineSafe(lines_with_constant, "No necesito ir ahora mismo.", "USE_TOILET", 19);
         addLineSafe(lines_with_constant, "No tengo tiempo para baños!", "USE_BATHTUB", 19);
-        addLineSafe(lines_with_constant, "Un gramophono precioso.", "USE_GRAMOPHONE", 19);
+        addLineSafe(lines_with_constant, "Un gramófono precioso.", "USE_GRAMOPHONE", 19);
         addLineSafe(lines_with_constant, "Un violín. No sé tocarlo.", "USE_VIOLIN", 19);
         addLineSafe(lines_with_constant, "No necesito lavarme las manos.", "USE_SINK", 19);
         addLineSafe(lines_with_constant, "Esta ventana no se abre.", "USE_WINDOW", 19);
@@ -192,10 +192,10 @@ public class TextES {
         addLineSafe(lines_with_constant, "Este baúl está cerrado.", "USE_CHEST_GUN1", 19);
         addLineSafe(lines_with_constant, "No hay nada más en el baúl.", "USE_CHEST_GUN2", 19);
         addLineSafe(lines_with_constant, "La llave ha abierto el baúl.", "TAKE_GUN1", 19);
-        addLineSafe(lines_with_constant, "Había un revolver dentro!", "TAKE_GUN2", 19);
+        addLineSafe(lines_with_constant, "Había un revólver dentro!", "TAKE_GUN2", 19);
 
-        addLineSafe(lines_with_constant, "Un libro de finanzas. Pero que raro,", "USE_BOOK_WESTENRA1", 19);
-        addLineSafe(lines_with_constant, "ten lugar de Westen, estas son las,", "USE_BOOK_WESTENRA2", 19);
+        addLineSafe(lines_with_constant, "Un libro de finanzas. Pero qué raro,", "USE_BOOK_WESTENRA1", 19);
+        addLineSafe(lines_with_constant, "en lugar de Westen, éstas son las,", "USE_BOOK_WESTENRA2", 19);
         addLineSafe(lines_with_constant, "finanzas de la familia Westenra...", "USE_BOOK_WESTENRA3", 19);
 
         addLineSafe(lines_with_constant, "El diario de Lucy Westenra. La ma-", "USE_DIARY3_1", 19);
@@ -224,7 +224,7 @@ public class TextES {
         addLineSafe(lines_with_constant, "libros de las artes oscuras!", "MSG_BOOKS2", 19);
         addLineSafe(lines_with_constant, "Por qué los tendría JW?!", "MSG_BOOKS3", 19);
         addLineSafe(lines_with_constant, "Qué es esto?! Estaba JW relizando", "MSG_PENTAGRAM1", 19);
-        addLineSafe(lines_with_constant, "rituales demónicos?!", "MSG_PENTAGRAM2", 19);
+        addLineSafe(lines_with_constant, "rituales demoníacos?!", "MSG_PENTAGRAM2", 19);
 
         addLineSafe(lines_with_constant, "La puerta se ha abierto! Creía que", "MSG_PENTAGRAM_SOLVED1", 19);
         addLineSafe(lines_with_constant, "solo buscaba las notas de JW, pero", "MSG_PENTAGRAM_SOLVED2", 19);
@@ -236,10 +236,10 @@ public class TextES {
 
         addLineSafe(lines_with_constant, "Oigo ruidos en la entrada!", "MSG_FAMILY_CUTSCENE1", 19);
         addLineSafe(lines_with_constant, "Arthur: Por fin! Ese hermano tuyo está muerto!", "MSG_FAMILY_CUTSCENE2", 31);
-        addLineSafe(lines_with_constant, "Lucy: Si! La casa es ahora mía!", "MSG_FAMILY_CUTSCENE3", 31);
+        addLineSafe(lines_with_constant, "Lucy: Sí! La casa es ahora mía!", "MSG_FAMILY_CUTSCENE3", 31);
         addLineSafe(lines_with_constant, "Lucy: Ansiaba ya entrar en mi sótano en paz!", "MSG_FAMILY_CUTSCENE4", 31);
         addLineSafe(lines_with_constant, "Lucy: En esta casa construiremos nuestra familia!!", "MSG_FAMILY_CUTSCENE5", 31);
-        addLineSafe(lines_with_constant, "Lucy: Hoy somos solo nosotros pero mañana seremos más!", "MSG_FAMILY_CUTSCENE6", 31);
+        addLineSafe(lines_with_constant, "Lucy: Hoy somos sólo nosotros pero mañana seremos más!", "MSG_FAMILY_CUTSCENE6", 31);
         addLineSafe(lines_with_constant, "Lucy: Jajaja", "MSG_FAMILY_CUTSCENE7A", 31);
         addLineSafe(lines_with_constant, "John: Jajaja", "MSG_FAMILY_CUTSCENE7B", 31);
         addLineSafe(lines_with_constant, "Arthur: Jajaja", "MSG_FAMILY_CUTSCENE7C", 31);
@@ -252,33 +252,33 @@ public class TextES {
         addLineSafe(lines_with_constant, "Se ha abierto!", "OPEN_VAMPIRE1_DOOR", 19);
         addLineSafe(lines_with_constant, "Ya no necesito este diario...", "OPEN_VAMPIRE1_DOOR2", 19);
         addLineSafe(lines_with_constant, "Un vampiro!", "ENTER_VAMPIRE_ROOM1", 19);
-        addLineSafe(lines_with_constant, "Me acercaré mienstras duerme...", "ENTER_VAMPIRE_ROOM2", 19);
+        addLineSafe(lines_with_constant, "Me acercaré mientras duerme...", "ENTER_VAMPIRE_ROOM2", 19);
 
-        addLineSafe(lines_with_constant, "Esta debe ser Lucy!", "ENTER_VAMPIRE3_ROOM1", 19);
-        addLineSafe(lines_with_constant, "Lo conseguí! Lucy está muerta!", "ENTER_VAMPIRE3_ROOM2", 19);        
-        addLineSafe(lines_with_constant, "Había una nota en el cadaver.", "FIND_VAMPIRE_NOTE", 19);
+        addLineSafe(lines_with_constant, "Ésta debe ser Lucy!", "ENTER_VAMPIRE3_ROOM1", 19); // CHECK: Capital E acute
+        addLineSafe(lines_with_constant, "Lo conseguí! Lucy está muerta!", "ENTER_VAMPIRE3_ROOM2", 19);
+        addLineSafe(lines_with_constant, "Había una nota en el cadáver.", "FIND_VAMPIRE_NOTE", 19);
         
         
         addLineSafe(lines_with_constant, "Tareas de John Seward:", "VAMPIRE1_NOTE1", 24);
         addLineSafe(lines_with_constant, "- Matar a JW (hecho)", "VAMPIRE1_NOTE2", 24);
-        addLineSafe(lines_with_constant, "- Encontrr mi diario", "VAMPIRE1_NOTE3", 24);
+        addLineSafe(lines_with_constant, "- Encontrar mi diario", "VAMPIRE1_NOTE3", 24);
         addLineSafe(lines_with_constant, "- Agradecer a Lucy por usar nuestras ini-", "VAMPIRE1_NOTE4", 24);
         addLineSafe(lines_with_constant, "  ciales para formar su nombre vampírico.", "VAMPIRE1_NOTE5", 24);
         addLineSafe(lines_with_constant, "  Qué honor para nosotros tres!", "VAMPIRE1_NOTE6", 24);
 
         addLineSafe(lines_with_constant, "Lucy, por qué tuviste que usar las ini-", "VAMPIRE2_NOTE1", 22);
         addLineSafe(lines_with_constant, "ciales de esos dos? YO soy tu marido!", "VAMPIRE2_NOTE2", 22);        
-        addLineSafe(lines_with_constant, "Al menos usaste las mias primero...", "VAMPIRE2_NOTE3", 22);
+        addLineSafe(lines_with_constant, "Al menos usaste las mías primero...", "VAMPIRE2_NOTE3", 22);
         addLineSafe(lines_with_constant, "Arthur Holmwood", "VAMPIRE2_NOTE4", 22);
 
-        addLineSafe(lines_with_constant, "2 de deciembre, 1898", "ENDING_LINE1", 17);
-        addLineSafe(lines_with_constant, "Aún no sé como sentirme acerca", "ENDING_LINE2", 17);
+        addLineSafe(lines_with_constant, "2 de diciembre, 1898", "ENDING_LINE1", 17);
+        addLineSafe(lines_with_constant, "Aún no sé cómo sentirme acerca", "ENDING_LINE2", 17);
         addLineSafe(lines_with_constant, "de los eventos que sucedieron", "ENDING_LINE3", 17);
         addLineSafe(lines_with_constant, "en la mansión Westen... digo", "ENDING_LINE4", 17);
         addLineSafe(lines_with_constant, "Westenra...", "ENDING_LINE5", 17);
 
         addLineSafe(lines_with_constant, "Aunque me alivia haber liberado", "ENDING_LINE6", 17);
-        addLineSafe(lines_with_constant, "al mundo de esas béstias y", "ENDING_LINE7", 17);
+        addLineSafe(lines_with_constant, "al mundo de esas bestias y", "ENDING_LINE7", 17);
         addLineSafe(lines_with_constant, "seguir con vida, me entristece", "ENDING_LINE8", 17);
         addLineSafe(lines_with_constant, "saber que la vida de mi buen", "ENDING_LINE9", 17);
         addLineSafe(lines_with_constant, "amigo terminó por culpa de", "ENDING_LINE10", 17);
