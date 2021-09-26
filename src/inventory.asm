@@ -1042,7 +1042,7 @@ inventory_fn_oil_with_lamp:
 
 inventory_fn_heart:
 	ex de,hl
-	ld hl,player_max_health
+	ld hl,player_health
 	ld a,(hl)
 	cp 5
 	ret z
