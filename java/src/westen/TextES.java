@@ -215,7 +215,7 @@ public class TextES {
         addLineSafe(lines_with_constant, "Una estaca de madera con ajo.", "USE_RUBBED_STAKE", 19);
         addLineSafe(lines_with_constant, "Ahora no! El vampiro está alerta!", "USE_RUBBED_STAKE_AWAKE", 19);
         addLineSafe(lines_with_constant, "Debo acercarme más!", "USE_RUBBED_STAKE_TOO_FAR", 19);
-        addLineSafe(lines_with_constant, "Ha funcionado! Lo he matado", "USE_RUBBED_STAKE_KILL", 19);
+        addLineSafe(lines_with_constant, "Ha funcionado! Ha muerto!", "USE_RUBBED_STAKE_KILL", 19);
         addLineSafe(lines_with_constant, "Hay una cerradura de combinación.", "USE_VAMPIRE_DOOR", 19);
         addLineSafe(lines_with_constant, "Qué raro! Esta parte de la casa", "MSG_ABANDONED1", 19);
         addLineSafe(lines_with_constant, "parece abandonada...", "MSG_ABANDONED2", 19);

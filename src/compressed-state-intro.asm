@@ -247,11 +247,11 @@ state_intro_cutscene_loop1:
     	inc hl
     	ld (keyboard_line_state),a
 state_intro_cutscene_loop2:
-        ld c,2
-        call wait_for_interrupt
-
     	push bc
     	push hl
+            ld c,2
+            call wait_for_interrupt
+        
     		call update_player
     		call draw_player
     	pop hl

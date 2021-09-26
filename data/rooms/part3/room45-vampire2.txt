@@ -16,4 +16,4 @@ chest2 2 4 0
 night-table 10 10 0
 vase 2 7 0
 vase 2 9 0
-bookstack 4 2 0
+bookstack 5 2 0

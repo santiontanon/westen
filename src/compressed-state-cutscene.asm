@@ -133,13 +133,13 @@ family_cutscene_lucy_walk_loop_no_dec_y:
 
     ld a,TEXT_MSG_FAMILY_CUTSCENE5_IDX
     ld bc,TEXT_MSG_FAMILY_CUTSCENE5_BANK + 31*8*256
-    ld de,CHRTBL2 + (21*32 + 6)*8 
+    ld de,CHRTBL2 + (21*32 + 4)*8 
     ld iyl,COLOR_GREEN*16
     call intro_cutscene_text
 
     ld a,TEXT_MSG_FAMILY_CUTSCENE6_IDX
     ld bc,TEXT_MSG_FAMILY_CUTSCENE6_BANK + 31*8*256
-    ld de,CHRTBL2 + (21*32 + 2)*8 
+    ld de,CHRTBL2 + (21*32 + 1)*8 
     ld iyl,COLOR_GREEN*16
     call intro_cutscene_text
 

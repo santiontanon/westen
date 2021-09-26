@@ -488,7 +488,7 @@ inventory_fn_use_pickup_candle1:
 	ld de,state_candle1_position
 inventory_fn_use_pickup_candle1_continue:
 	ld a,#ff
-	ld (state_candle1_position),a 
+	ld (de),a 
 	ld a,INVENTORY_CANDLE
 	jp inventory_fn_use_pickup_continue
 

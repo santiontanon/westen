@@ -18,8 +18,8 @@ brickwall 12 10 0
 brickwall 14 10 0
 brickwall 16 10 0
 brickwall 10 8 0
-grid 11 6 0
-grid 11 4 0
+grid 10 6 0
+grid 10 4 0
 brickwall 10 2 0
 crate 2 16 0
 rat 2 3 0 1 0
