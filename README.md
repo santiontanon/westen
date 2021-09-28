@@ -33,7 +33,7 @@ You play as Professor Edward Kelvin, who has been asked to collect the research 
 ## Acknowledgments
 
 - Thanks to Jordi Sureda who betatested early versions of the game and caught many, many bugs!
-- Thanks to Raffael Jannone for the Brazilian Portuguese translation!
+- Thanks to Rafael Jannone for the Brazilian Portuguese translation!
 - And thanks to the many, many people that have reported bugs, issues, and given suggestions since the first release!!! Sorry for not listing all the names, sicne I'm sure I would forget someone, but thank you very, very much!
 
 
