@@ -1,6 +1,6 @@
 ## Westen House (MSX) by Santiago Ontañón Villar
 
-Download latest compiled ROMs (v1.3) from (Ensligh ans Spanish versions available): https://github.com/santiontanon/westen/releases/tag/v1.3
+Download latest compiled ROMs (v1.3.1) from (Ensligh, Spanish and Brazilian Portuguese versions available): https://github.com/santiontanon/westen/releases/tag/v1.3.1
 
 
 You will need an MSX emulator to play the game on a PC, for example OpenMSX: http://openmsx.org
@@ -33,6 +33,8 @@ You play as Professor Edward Kelvin, who has been asked to collect the research 
 ## Acknowledgments
 
 - Thanks to Jordi Sureda who betatested early versions of the game and caught many, many bugs!
+- Thanks to Raffael Jannone for the Brazilian Portuguese translation!
+- And thanks to the many, many people that have reported bugs, issues, and given suggestions since the first release!!! Sorry for not listing all the names, sicne I'm sure I would forget someone, but thank you very, very much!
 
 
 ## Compatibility
