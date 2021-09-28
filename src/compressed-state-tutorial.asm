@@ -38,17 +38,17 @@ display_tutorial1:
 
 		; Draw tutorial text:
 	    ld a,TEXT_TUTORIAL1_LINE1_IDX
-	    ld bc,TEXT_TUTORIAL1_LINE1_BANK + 17*8*256
+	    ld bc,TEXT_TUTORIAL1_LINE1_BANK + 18*8*256
 	    ld de,CHRTBL2 + (5*32 + 8)*8 
 	    call draw_text_from_bank_white
 
 	    ld a,TEXT_TUTORIAL1_LINE2_IDX
-	    ld bc,TEXT_TUTORIAL1_LINE2_BANK + 17*8*256
+	    ld bc,TEXT_TUTORIAL1_LINE2_BANK + 18*8*256
 	    ld de,CHRTBL2 + (7*32 + 8)*8 
 	    call draw_text_from_bank_white
 
 	    ld a,TEXT_TUTORIAL1_LINE3_IDX
-	    ld bc,TEXT_TUTORIAL1_LINE3_BANK + 17*8*256
+	    ld bc,TEXT_TUTORIAL1_LINE3_BANK + 18*8*256
 	    ld de,CHRTBL2 + (15*32 + 8)*8 
 	    call draw_text_from_bank_white
 

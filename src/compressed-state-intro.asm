@@ -199,7 +199,7 @@ state_intro_find_door_loop_found:
     call intro_draw_text
 
     ld a,TEXT_INTRO_MSG8_IDX
-    ld bc,TEXT_INTRO_MSG8_BANK + 12*8*256
+    ld bc,TEXT_INTRO_MSG8_BANK + 14*8*256
     ld de,CHRTBL2 + (17*32 + 11)*8 
     ld iyl,COLOR_WHITE*16
     call intro_draw_text
@@ -251,7 +251,7 @@ state_intro_cutscene_loop2:
     	push hl
             ld c,2
             call wait_for_interrupt
-        
+
     		call update_player
     		call draw_player
     	pop hl

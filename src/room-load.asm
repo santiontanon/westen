@@ -881,7 +881,7 @@ create_wall_colliders_x:
 	ld a,MAX_COORDINATE
 	sub (iy+OBJECT_STRUCT_PIXEL_ISO_Y)
 	ld (iy+OBJECT_STRUCT_PIXEL_ISO_H), a
-	ld (iy+OBJECT_STRUCT_PIXEL_ISO_Z_H), 64
+	ld (iy+OBJECT_STRUCT_PIXEL_ISO_Z_H), 80
 
 	ld a,(n_doors)
 	or a
@@ -950,7 +950,7 @@ create_wall_colliders_y:
 	sub (iy+OBJECT_STRUCT_PIXEL_ISO_X)
 	ld (iy+OBJECT_STRUCT_PIXEL_ISO_W), a
 	ld (iy+OBJECT_STRUCT_PIXEL_ISO_H), 16
-	ld (iy+OBJECT_STRUCT_PIXEL_ISO_Z_H), 64
+	ld (iy+OBJECT_STRUCT_PIXEL_ISO_Z_H), 80
 
 	ld a,(n_doors)
 	or a

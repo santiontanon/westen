@@ -1,5 +1,12 @@
 ;-----------------------------------------------
 state_password_lock:
+	push ix
+		call state_password_lock_internal
+	pop ix
+	ret
+
+
+state_password_lock_internal:	
 	ld bc, TEXT_USE_VAMPIRE_DOOR_BANK + 256*TEXT_USE_VAMPIRE_DOOR_IDX
 	call queue_hud_message
 

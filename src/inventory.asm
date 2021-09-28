@@ -529,8 +529,7 @@ inventory_fn_use_pickup_lab_notes:
 	ld (state_lab_notes_taken),a 
 	ld (hl),INVENTORY_LAB_NOTES
 	call remove_room_object
-	ld hl,SFX_ui_select
-	call play_SFX_with_high_priority
+	call play_SFX_ui_select
 	call hud_update_inventory	
 	jp inventory_fn_lab_notes
 
@@ -575,8 +574,7 @@ inventory_fn_use_pickup_stake3:
 inventory_fn_use_pickup_continue:
 	ld (hl),a
 	call remove_room_object
-	ld hl,SFX_ui_select
-	call play_SFX_with_high_priority
+	call play_SFX_ui_select
 ; inventory_fn_use_back_to_jump:
 ; 	xor a
 ; 	ld (inventory_selected),a
@@ -588,9 +586,7 @@ inventory_fn_use_breakable_crate:
 
 
 inventory_fn_use_door_vampire1:
-	push ix
-		call state_password_lock
-	pop ix
+	call state_password_lock
 	ld a,(game_time_day)
 	cp 8
 	ret c  ; if player has not yet seen the cut scene, do not let the doors open
@@ -633,23 +629,18 @@ inventory_fn_use_door_vampire1_loop:
 	call queue_hud_message
 inventory_fn_use_door_vampire1_no_diary:
 inventory_fn_use_door_vampire1_no_note2:	
-	ld hl,SFX_door_open
-	jp play_SFX_with_high_priority
+	jp play_SFX_door_open
 
 
 inventory_fn_use_door_vampire2:
-	push ix
-		call state_password_lock
-	pop ix
+	call state_password_lock
 	ld iy,state_vampire2_state
 	ld de,password_vampire2
 	ld c,INVENTORY_DIARY2
 	jr inventory_fn_use_door_vampire2_entry_point
 
 inventory_fn_use_door_vampire3:
-	push ix
-		call state_password_lock
-	pop ix
+	call state_password_lock
 	ld iy,state_vampire3_state
 	ld de,password_vampire3
 	ld c,INVENTORY_VAMPIRE1_NOTE
@@ -732,8 +723,7 @@ inventory_fn_candle_entrypoint:
 	add 8
 	ld (hl),a
 
-	ld hl,SFX_drop_item
-	call play_SFX_with_high_priority
+	call play_SFX_door_open
 	jp hud_update_inventory
 ; 	jr inventory_fn_use_back_to_jump
 
@@ -827,8 +817,7 @@ inventory_fn_yellow_key_found:
 
 	; remove door (ix):
 	call remove_room_object
-	ld hl,SFX_door_open
-	call play_SFX_with_high_priority
+	call play_SFX_door_open
 	jp hud_update_inventory
 ; 	jp inventory_fn_use_back_to_jump
 
@@ -862,8 +851,7 @@ inventory_fn_gun_key_chest_found:
 	; switch gun key by gun:
 	ld (hl),INVENTORY_GUN
 
-	ld hl,SFX_door_open
-	call play_SFX_with_high_priority
+	call play_SFX_door_open
 
 	; message:
 	ld bc, TEXT_TAKE_GUN1_BANK + 256*TEXT_TAKE_GUN1_IDX
@@ -1046,6 +1034,7 @@ inventory_fn_heart:
 	ld a,(hl)
 	cp 5
 	ret z
+	ld hl,player_max_health
 	xor a
 	ld (de),a
 	ld a,(hl)
@@ -1055,8 +1044,7 @@ inventory_fn_heart:
 	ld a,(hl)
 inventory_fn_heart_max:
 	ld (player_health),a
-	ld hl,SFX_ui_select
-	call play_SFX_with_high_priority
+	call play_SFX_ui_select
 	call hud_update_health
 	jp hud_update_inventory
 ; 	jp inventory_fn_use_back_to_jump
@@ -1185,8 +1173,7 @@ inventory_fn_candle_store_position:
     call clear_rectangle_bitmap_mode_color
 
 	; play SFX:
-	ld hl,SFX_door_open
-	call play_SFX_with_high_priority
+	call play_SFX_door_open
 
 	halt
 
@@ -1502,8 +1489,7 @@ inventory_fn_hammer_garlic_crate_continue:
 	ld a,(ix+OBJECT_STRUCT_PIXEL_ISO_X)
 	push af
 	call remove_room_object
-	ld hl,SFX_door_open
-	call play_SFX_with_high_priority
+	call play_SFX_door_open
 
 	; spawn garlic:
 	call find_new_object_ptr
@@ -1570,8 +1556,7 @@ inventory_fn_hammer_stake_crate_continue:
 	ld a,(ix+OBJECT_STRUCT_PIXEL_ISO_X)
 	push af
 	call remove_room_object
-	ld hl,SFX_door_open
-	call play_SFX_with_high_priority
+	call play_SFX_door_open
 
 	; spawn stake:
 	call find_new_object_ptr
@@ -1795,3 +1780,15 @@ inventory_fn_vampire2_note:
 ; 	ld de,16 + 5*256
 ; 	ld bc,12+7*256
 ; 	jp render_room_rectangle
+
+
+;-----------------------------------------------
+; helper functions to save space in the ROM:
+play_SFX_door_open:
+	ld hl,SFX_door_open
+	jp play_SFX_with_high_priority
+
+
+play_SFX_ui_select:
+	ld hl,SFX_ui_select
+	jp play_SFX_with_high_priority
