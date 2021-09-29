@@ -140,7 +140,7 @@ public class Objects {
                        10, 20, 18, 3, 3, outputFolder + "/sink");
         
         generateObject(img, 20, 3, 2, 2, 
-                       8, 8, 2, 1, 1, outputFolder + "/letter3");
+                       6, 6, 2, 1, 1, outputFolder + "/letter3");
         generateObject(img, 22, 3, 2, 2, 
                        8, 8, 6, 1, 1, outputFolder + "/lamp");
         generateObject(img, 0, 16, 2, 2, 
